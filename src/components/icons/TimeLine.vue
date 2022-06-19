@@ -19,14 +19,14 @@
       <g
         id="calcium"
         class="good"
-        data-name="钙片 图像"
+        data-name="老年钙片 图像"
         onclick="console.log(1)"
         :content="this.contents.calcium"
         v-tippy="{ followCursor: true }"
       >
         <image
           id="calcium-2"
-          data-name="钙片 图像"
+          data-name="老年钙片 图像"
           width="79"
           height="121"
           transform="translate(667.09 138.55) scale(0.55)"
@@ -36,14 +36,14 @@
       <g
         id="powder"
         class="good"
-        data-name="奶粉 图像"
+        data-name="老年奶粉 图像"
         onclick="console.log(1)"
         :content="this.contents.powder"
         v-tippy="{ followCursor: true }"
       >
         <image
           id="powder-2"
-          data-name="奶粉 图像"
+          data-name="老年奶粉 图像"
           width="75"
           height="111"
           transform="translate(607.09 158.18) scale(0.55)"
@@ -222,18 +222,70 @@ export default {
         waist: {
           name: "护腰",
           value: "1.4",
+          price_m: 139.72,
+          price_f: 171.88,
         },
-        clothes: { name: "服装", value: "1.4" },
-        powder: { name: "奶粉", value: "1.4" },
-        calcium: { name: "钙片", value: "1.4" },
-        shaver: { name: "剃须刀", value: "1.4" },
-        hair: { name: "美发", value: "1.4" },
-        ibuprofen: { name: "布洛芬", value: "1.4" },
-        toothbrush: { name: "牙刷", value: "1.4" },
-        shampoo: { name: "洗发水", value: "1.4" },
-        stationary: { name: "文具", value: "1.4" },
-        childcloth: { name: "童装", value: "1.4" },
-        skincare: { name: "护肤品", value: "1.4" },
+        clothes: {
+          name: "服装",
+          value: "1.4",
+          price_m: 122.91,
+          price_f: 189.33,
+        },
+        powder: {
+          name: "老年奶粉",
+          value: "1.4",
+          price_m: 158.74,
+          price_f: 252.6,
+        },
+        calcium: {
+          name: "老年钙片",
+          value: "1.4",
+          price_m: 123.34,
+          price_f: 130.28,
+        },
+        shaver: {
+          name: "剃须刀",
+          value: "1.4",
+          price_m: 137.97,
+          price_f: 254.23,
+        },
+        hair: { name: "美发", value: "1.4", price_m: 126.6, price_f: 175.53 },
+        ibuprofen: {
+          name: "布洛芬",
+          value: "1.4",
+          price_m: 62.71,
+          price_f: 100.21,
+        },
+        toothbrush: {
+          name: "牙刷",
+          value: "1.4",
+          price_m: 92.68,
+          price_f: 102.46,
+        },
+        shampoo: {
+          name: "洗发水",
+          value: "1.4",
+          price_m: 78.82,
+          price_f: 103.2,
+        },
+        stationary: {
+          name: "文具",
+          value: "1.4",
+          price_m: 59.81,
+          price_f: 62.56,
+        },
+        childcloth: {
+          name: "童装",
+          value: "1.4",
+          price_m: 139.72,
+          price_f: 171.88,
+        },
+        skincare: {
+          name: "护肤品",
+          value: "1.4",
+          price_m: 236.76,
+          price_f: 492.51,
+        },
       },
       contents: {},
     };
@@ -243,20 +295,28 @@ export default {
     keys.forEach((key) => {
       this.contents[key] = this.getContent(
         this.tips[key].name,
-        this.tips[key].value
+        this.tips[key].price_m,
+        this.tips[key].price_f
       );
     });
     // console.log(this.contents);
   },
   methods: {
-    getContent: function (name, value) {
-      const content = `<p>商品名称：${name}</p><p>搜索"${name} 女"返回的商品均价<br/>是"${name} 男"的<span>${value}倍</span></p>`;
+    getContent: function (name, price_m, price_f) {
+      const content = `<div style="width:200px">
+      <p>商品名称：${name}</p>
+      <p>搜索词返回的商品均价:<br/>
+        "${name} 男": <span>${price_m}</span>
+        <br/>
+        "${name} 女": <span>${price_f}</span>
+        </p></div>`;
       return content;
     },
   },
 };
 </script>
 <style>
+
 .tl_container {
   width: 100%;
   /* min-width: 100%; */

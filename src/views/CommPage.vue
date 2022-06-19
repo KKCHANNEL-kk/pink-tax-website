@@ -1,7 +1,13 @@
 <template>
   <div>
     <hello-world-vue></hello-world-vue>
-    <testRoll></testRoll>
+    <b-container>
+      <div
+        class="flourish-embed flourish-hierarchy"
+        data-src="visualisation/10390634"
+      >
+      </div>
+    </b-container>
     <Jumbotron :img="title_pic_path[0]" title=" " subtitle=" "> </Jumbotron>
     <Jumbotron :img="title_pic_path[1]" title=" " subtitle=" "> </Jumbotron>
     <Jumbotron :img="title_pic_path[2]" title=" " subtitle=" "> </Jumbotron>
@@ -11,13 +17,11 @@
 
 <script>
 import HelloWorldVue from "@/components/HelloWorld.vue";
-import testRoll from "../components/testRoll.vue";
 import Jumbotron from "../components/MyJumbotron.vue";
 export default {
   name: "CommPage",
   components: {
     HelloWorldVue,
-    testRoll,
     Jumbotron,
   },
   data() {
@@ -35,5 +39,9 @@ export default {
 <style scoped>
 .bg_container {
   margin-bottom: 50vh;
+}
+iframe {
+  height: 80vh;
+  width: 100vw;
 }
 </style>

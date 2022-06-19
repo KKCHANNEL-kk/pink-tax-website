@@ -22,7 +22,7 @@ export default {
 <style>
 .bg_container {
   width: 100vw;
-  height: 50vh;
+  height: 100vh;
   z-index: 10;
   background-attachment: fixed;
   background-position: top center;

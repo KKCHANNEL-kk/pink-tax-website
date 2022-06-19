@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- <h1 class="text-center display-1">被粉饰的迷局</h1> -->
-    <div class="content container" style="padding-bottom: 50vh">
+    <div class="content container" style="height: 95vh">
       <transition
         name="fade"
         class="animate__animated animate__bounceIn"
@@ -74,6 +74,11 @@
               />
             </b-col>
           </b-row>
+          <b-row>
+            <b-col>
+              <h2>↓下滑展开正文↓</h2>
+            </b-col>
+          </b-row>
         </b-container>
       </transition>
     </div>
@@ -99,7 +104,8 @@
       <section id="lifejourney">
         <h2 class="text-center display-3">被“税”的女性一生</h2>
         <div class="content container">
-          <div class="p-fullpage__calculator-inner">
+          <!-- 购物车 估计是赶不上了 -->
+          <!-- <div class="p-fullpage__calculator-inner">
             <div
               data-html2canvas-ignore="true"
               class="p-fullpage__calculator-activity"
@@ -143,23 +149,17 @@
                 <div class="p-fullpage__calculator-error"></div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <p>
+          <strong>这一段！！文字需要改！！！</strong>
           报道以“女性的一生”视角切入，从女性在出生阶段、青年、壮年以及老年阶段中所需的消费，并在个阶段中抽取部分特定商品，统计平均女性需要花费的金额，并与男性需要花费的金额进行比较。如在幼儿时期的儿童玩具、青年时期的洗护产品、雨伞等日用品以及老年时期的保健用品甚至轮椅、拐杖等商品。通过展示粉红税存在的常见产品类型、价格差异、销量情况甚至是相关品牌，
         </p>
         <p>
           现阶段思路：制作时间轴条漫/货架/商品辐射图——主体是不同阶段的女性形象与购物清单，每个人生阶段对照清单上的商品，点击出现商品市场调研结果（针对男女的不同均价、粉红税率，如有必要也可国内外对比，用报告数据与结论……）
         </p>
         <p class="text-left display-6">置身“粉红税”陷阱当中的“她”们</p>
-        <div id="result2" key="q2_chart">
-          <v-chart
-            class="chart"
-            ref="diagram"
-            :option="sankey_options"
-            :theme="chartTheme"
-          />
-        </div>
+
         <p>
           据电商平台上抓取的不同商品价格数据反映，从儿童玩具、成人服饰到老年用品，女用商品通常要比男用商品均价要高（待求证），且这些商品往往在核心功能上并无差异。此类溢价现象通常表现为，同一品牌同一设计下，粉色商品要比其他颜色的商品贵。甚至有时仅仅将商品名称条目中的“女”，更改成“男”，就产生了不可忽视的价格差。
           2021年年末，大二学生雨婷在某品牌电商旗舰店内下单了一条心仪已久的女款长裤。不久后，她却发现了令人瞠目的事实：该店同时还出售男子尺码的同款长裤，在外观设计与详情描述均相同的情况下，售价却比女款便宜100元。
@@ -190,7 +190,16 @@
         <p>
           偏爱粉红色、精致香味、精美包装，是消费主义时代下，女性消费者被塑造的刻板印象。当部分针对女性设计的商品被添加了特殊香料或其他成分时，更高的设计制造成本致使售价更高，这无可厚非。然而，在核心功能不变的情况下，粉色产品的定价比同款商品的其他颜色定价更高，这种现象也并不罕见。
         </p>
-        <div><p>【问卷可视化】消费者选择偏好的改变</p></div>
+        <div>
+          <div id="result2" key="q2_chart">
+            <v-chart
+              class="chart"
+              ref="diagram"
+              :option="sankey_options"
+              :theme="chartTheme"
+            />
+          </div>
+        </div>
         <p>
           相比单纯更换商品颜色，外包装整体的更新换代，似乎为商品提价赋予了更“正当”的提价契机。以芬必得布洛芬咀嚼片为例，作为一种较为大众的止痛片，该药品的外包装盒从先前的男性人像变成女性人像，疼痛点也从先前的头部转移至女子腹部位置。
         </p>
@@ -235,7 +244,9 @@
         <P>
           这并非是平地一声雷，美国在消除粉红税的道路上已探索已久。早在20世纪30年代，美国在起草消费税体系时就已提出了粉红税的概念；而于1995年，加利福尼亚州通过了《性别税废除法案》，在全国有关禁止性别歧视性定价的法案探索中迈出里程碑式的第一步。
         </P>
-        <P>地方法时间轴 todo</P>
+        <div class="container" style="width: 80%">
+          <law-time-line></law-time-line>
+        </div>
         <p>
           现如今，少数州和地方立法机构已经采取相关措施，禁止了基于性别的服务定价，但美国依然在禁止粉红税在司法和立法过程中面临诸多挑战。一方面，尽管存在上述出台法律的支持，但因同类商品存在价格差异而与商家对簿公堂的消费者依然少之又少。从法律全文数据库Westlaw检索结果来看，有关性别歧视性定价的案件仅有6例，而除去上诉案件的审理，只有3位消费者就该问题向法院提出诉讼，并皆以败诉告终。
         </p>
@@ -245,7 +256,6 @@
         <p>
           另一方面，既有法律所涉及的范围具有极大的局限性。在废除粉红税的法律体系中，商家依然被允许通过延长服务时间、提高服务成本和难度来设计更高的标价，而有关产品的价格歧视并不在法律的约束范围内。同时，国会两院拟议的《粉红税废除法案》几经波折，除了部分成员的阻挠，诸如“辨别何为‘类似产品’”等细节定义也成为阻碍推进立法的绊脚石。直到报道的今天，该法案始终停留在“提出草案”的第一步，在它之后，还有“众议院通过-参议院通过-总统批准-颁布法律”的漫漫长路。
         </p>
-        <div class="container"><law-time-line></law-time-line></div>
       </section>
     </div>
 
@@ -625,7 +635,7 @@ export default {
 };
 </script>
 
-<style lang="css">
+<style rel="stylesheet/scss" lang="scss">
 * {
   margin: 0;
   padding: 0;
@@ -671,6 +681,30 @@ p {
   transition-duration: 0.3s !important;
   cursor: pointer;
 }
+// @include media-breakpoint-up(sm) {
+//   .ux_container .selected_card {
+//     width: 12rem;
+//     height: 12rem;
+//   }
+// }
+// @include media-breakpoint-up(md) {
+//   .ux_container .selected_card {
+//     width: 15rem;
+//     height: 15rem;
+//   }
+// }
+// @include media-breakpoint-up(lg) {
+//   .ux_container .selected_card {
+//     width: 17rem;
+//     height: 17rem;
+//   }
+// }
+// @include media-breakpoint-up(xl) {
+//   .ux_container .selected_card {
+//     width: 20rem;
+//     height: 20rem;
+//   }
+// }
 .ux_container .selected_card {
   /* 相对定位 */
   position: relative;
