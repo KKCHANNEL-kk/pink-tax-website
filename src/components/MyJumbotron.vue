@@ -3,8 +3,22 @@
     class="bg_container text-white shadow"
     :style="{ backgroundImage: 'url(' + backgroundImg + ')' }"
   >
-    <h2 class="display-2">{{ title }}</h2>
-    <h3 class="display-4">{{ subtitle }}</h3>
+    <p
+      class="text-center display-1 font-weight-bold"
+      style="top: 15%; font-weight: 500; text-shadow: black 0.1em 0.1em 0.2em"
+    >
+      {{ title }}
+    </p>
+    <p
+      class="text-center display-1 font-weight-bold"
+      style="
+        bottom: 15%;
+        font-weight: 500;
+        text-shadow: black 0.1em 0.1em 0.2em;
+      "
+    >
+      {{ subtitle }}
+    </p>
   </div>
 </template>
 
@@ -22,19 +36,15 @@ export default {
 <style>
 .bg_container {
   width: 100vw;
-  height: 100vh;
-  z-index: 10;
+  height: 70vh;
   background-attachment: fixed;
   background-position: top center;
+  background-size: cover;
   /* min-width: 100%; */
-
-  min-height: 60%;
+  position: relative;
+  min-height: 70%;
 }
-h2 {
-  padding-top: 100px;
-}
-h3 {
-  padding-top: 50px;
-  padding-bottom: 100px;
+.bg_container p {
+  position: absolute;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- <h1 class="text-center display-1">被粉饰的迷局</h1> -->
-    <div class="content container" style="height: 95vh">
+    <div class="content container" style="height: 100%; min-height: 95vh">
       <transition
         name="fade"
         class="animate__animated animate__bounceIn"
@@ -57,11 +57,11 @@
         >
           <b-row>
             <b-col>
-              <h2>
-                有{{
-                  ((this.same_a1 / this.sum_a1) * 100).toFixed(2)
-                }}%的人和你做出一样的选择
-              </h2>
+              <h3 class="text-center display-3">
+                有<span
+                  >{{ ((this.same_a1 / this.sum_a1) * 100).toFixed(2) }}%</span
+                >的人和你做出一样的选择
+              </h3>
             </b-col>
           </b-row>
           <b-row style="width=100%" fluid>
@@ -76,14 +76,24 @@
           </b-row>
           <b-row>
             <b-col>
-              <h2>↓下滑展开正文↓</h2>
+              <p class="addition">*商品价格来源于某电商平台</p>
+            </b-col>
+          </b-row>
+          <b-row>
+            <b-col>
+              <h3 class="text-center display-3">↓下滑展开正文↓</h3>
             </b-col>
           </b-row>
         </b-container>
       </transition>
     </div>
 
-    <Jumbotron :img="title_pic_path[0]" title=" " subtitle=" "> </Jumbotron>
+    <Jumbotron
+      :img="title_pic_path[0]"
+      title="01.被粉饰的迷局: "
+      subtitle="货架上的“粉红税”陷阱"
+    >
+    </Jumbotron>
 
     <div class="content container">
       <section id="intro">
@@ -98,70 +108,19 @@
         </p>
       </section>
     </div>
-    <div class="container"><time-line></time-line></div>
+    <div class="container">
+      <h3>从「童装」到「老年奶粉」，“粉红税”贯穿女性一生</h3>
+      <time-line></time-line>
+    </div>
 
     <div class="content container">
       <section id="lifejourney">
-        <h2 class="text-center display-3">被“税”的女性一生</h2>
-        <div class="content container">
-          <!-- 购物车 估计是赶不上了 -->
-          <!-- <div class="p-fullpage__calculator-inner">
-            <div
-              data-html2canvas-ignore="true"
-              class="p-fullpage__calculator-activity"
-            >
-              <h2>IF YOU’RE A WOMAN, THE PINK TAX HAS COST YOU</h2>
-              <p>Enter your birthday to find out how much.</p>
-
-              <div class="p-fullpage__calculator-form">
-                <form id="pinktax-calculator">
-                  <input
-                    class="js-calculator-month"
-                    name="month"
-                    type="text"
-                    maxlength="2"
-                    pattern="[0-9]*"
-                    placeholder="MM"
-                  />
-                  <input
-                    class="js-calculator-day"
-                    name="day"
-                    type="text"
-                    maxlength="2"
-                    pattern="[0-9]*"
-                    placeholder="DD"
-                  />
-                  <input
-                    class="js-calculator-year"
-                    name="year"
-                    maxlength="4"
-                    type="text"
-                    pattern="[0-9]*"
-                    placeholder="YYYY"
-                  />
-                  <input
-                    id="p-fullpage__calculator-submit"
-                    class="c-button"
-                    type="submit"
-                    value="Calculate"
-                  />
-                </form>
-                <div class="p-fullpage__calculator-error"></div>
-              </div>
-            </div>
-          </div> -->
-        </div>
-        <p>
-          <strong>这一段！！文字需要改！！！</strong>
-          报道以“女性的一生”视角切入，从女性在出生阶段、青年、壮年以及老年阶段中所需的消费，并在个阶段中抽取部分特定商品，统计平均女性需要花费的金额，并与男性需要花费的金额进行比较。如在幼儿时期的儿童玩具、青年时期的洗护产品、雨伞等日用品以及老年时期的保健用品甚至轮椅、拐杖等商品。通过展示粉红税存在的常见产品类型、价格差异、销量情况甚至是相关品牌，
+        <p class="addition">
+          我们选取了不同年龄阶段具有代表性的中性商品，分别以“男”“女”字眼进行检索，从电商平台上抓取价格等数据并计算出均价，对比不同年龄段的男女消费者可能花费的金额。<br />
+          数据来源：京东
         </p>
         <p>
-          现阶段思路：制作时间轴条漫/货架/商品辐射图——主体是不同阶段的女性形象与购物清单，每个人生阶段对照清单上的商品，点击出现商品市场调研结果（针对男女的不同均价、粉红税率，如有必要也可国内外对比，用报告数据与结论……）
-        </p>
-        <p class="text-left display-6">置身“粉红税”陷阱当中的“她”们</p>
-
-        <p>
-          据电商平台上抓取的不同商品价格数据反映，从儿童玩具、成人服饰到老年用品，女用商品通常要比男用商品均价要高（待求证），且这些商品往往在核心功能上并无差异。此类溢价现象通常表现为，同一品牌同一设计下，粉色商品要比其他颜色的商品贵。甚至有时仅仅将商品名称条目中的“女”，更改成“男”，就产生了不可忽视的价格差。
+          据电商平台上抓取的不同商品价格数据反映，从儿童玩具、成人服饰到老年用品，女用商品通常要比男用商品均价要高，且这些商品往往在核心功能上并无差异。此类溢价现象通常表现为，同一品牌同一设计下，粉色商品要比其他颜色的商品贵。甚至有时仅仅将商品名称条目中的“女”，更改成“男”，就产生了不可忽视的价格差。
           2021年年末，大二学生雨婷在某品牌电商旗舰店内下单了一条心仪已久的女款长裤。不久后，她却发现了令人瞠目的事实：该店同时还出售男子尺码的同款长裤，在外观设计与详情描述均相同的情况下，售价却比女款便宜100元。
         </p>
         <p>
@@ -180,21 +139,26 @@
           再者，由于大多数消费者对“粉红税”的认知有限，甚至有人认为部分商品的溢价是合理存在的，所以尽管女性在经济上要比男性付出更大代价，多数情况下不会采取进一步的维权行为，愤怒的情绪终究会被平息。作为曾经的“受害者”雨婷表示，将来如果在该店遇到了喜欢的商品，<b>“我还是会买的”</b>。
         </p>
       </section>
-      <b-img :src="require('@/assets/douban_text.gif')" fluid></b-img>
     </div>
-
+    <Jumbotron
+      :img="title_pic_path[1]"
+      title="02.“粉红”法则 "
+      subtitle="谁在幕后操盘？"
+    >
+    </Jumbotron>
     <div class="content container">
       <section id="deepin">
-        <h2 class="text-center display-3">“粉红”法则，谁在背后操盘？</h2>
-        <p class="text-left display-6">表象与经济成因</p>
+        <!-- <h2 class="text-center display-3">“粉红”法则，谁在背后操盘？</h2> -->
+        <p class="text-left display-6">市场主体</p>
         <p>
           偏爱粉红色、精致香味、精美包装，是消费主义时代下，女性消费者被塑造的刻板印象。当部分针对女性设计的商品被添加了特殊香料或其他成分时，更高的设计制造成本致使售价更高，这无可厚非。然而，在核心功能不变的情况下，粉色产品的定价比同款商品的其他颜色定价更高，这种现象也并不罕见。
         </p>
         <div>
-          <div id="result2" key="q2_chart">
+          <div class="" id="result2" key="q2_chart">
             <v-chart
               class="chart"
               ref="diagram"
+              style="margin: 0 auto"
               :option="sankey_options"
               :theme="chartTheme"
             />
@@ -213,7 +177,13 @@
           像上述雨伞、键盘、布洛芬这类产品，通过在产品功能、外观设计及广告推广方面强调男女消费者的区别，是一种性别差异化的营销策略。社会学学者Elizabeth
           Sweet在其研究中发现，在1975年的Sears百货目录中，儿童玩具对象被明确列为是男孩还是女孩的比例还不到2%；到了1995年，比例扩大到50%左右，随着消费市场的发展壮大，基于性别差异化的营销模式伴也在成人商品市场里逐渐成熟。
         </p>
-        <p class="text-left display-6">文化成因</p>
+        <p class="text-left display-6">文化推手</p>
+        <div style="max-width: 900px">
+          <b-img :src="require('@/assets/douban_text.gif')" fluid></b-img>
+        </div>
+        <div class="addition">
+          *所有语录均摘选自豆瓣「粉红税抵制者联盟」小组
+        </div>
         <p>
           粉红税或许是一个深远的文化议题。论坛中深受“粉红税”困扰的消费者，会习惯性把将问题的矛头指向“性别歧视”与社会文化。这样的担忧不无道理。
         </p>
@@ -234,7 +204,6 @@
         <p>
           然而“曲线救国”的办法没有从根本上解决“粉红定价”的歧视性问题——商家们针对女性消费者制定更高的商品定价。女性消费者为何需要付出额外的努力，才能确保本来应有的经济权益不受损害？
         </p>
-        <p class="text-left display-6">法律、行业规范</p>
         <p>
           尽管针对粉红税的讨论与日俱增，但回首国内现有法律法规，类似规范尚属空白地带。
         </p>
@@ -247,6 +216,7 @@
         <div class="container" style="width: 80%">
           <law-time-line></law-time-line>
         </div>
+        <div class="addition">数据来源：网络搜索，westlaw</div>
         <p>
           现如今，少数州和地方立法机构已经采取相关措施，禁止了基于性别的服务定价，但美国依然在禁止粉红税在司法和立法过程中面临诸多挑战。一方面，尽管存在上述出台法律的支持，但因同类商品存在价格差异而与商家对簿公堂的消费者依然少之又少。从法律全文数据库Westlaw检索结果来看，有关性别歧视性定价的案件仅有6例，而除去上诉案件的审理，只有3位消费者就该问题向法院提出诉讼，并皆以败诉告终。
         </p>
@@ -350,12 +320,19 @@ export default {
       sankey_options: {
         tooltip: {
           trigger: "item",
-          formatter: "{a} <br/>{b} : {c} ({d}%)",
+          formatter: "{b} : {c}",
+        },
+        title: {
+          show: true,
+          text: "商品价格对消费者选择的影响",
+          subtext:
+            "从回收的407份问卷发现，在得知原先选择的商品款式比同类商品其他颜色（如黑色、灰色等）价格更高后，消费者的选择变化",
         },
         series: {
           type: "sankey",
           layout: "none",
           right: "15%",
+          top: "15%",
           emphasis: {
             focus: "adjacency",
           },
@@ -576,7 +553,10 @@ export default {
         },
       },
       chartTheme: "vintage",
-      title_pic_path: [require("@/assets/title_1.png")],
+      title_pic_path: [
+        require("@/assets/title_5.png"),
+        require("@/assets/title_6.png"),
+      ],
     };
   },
   created() {
@@ -648,13 +628,15 @@ section {
   vertical-align: middle;
   margin-top: 10px;
   margin-bottom: 10px;
+  padding: 2rem 0 2rem 0;
 }
 p {
   min-width: 100%;
   text-align: justify;
   max-width: 900px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.7rem;
   /* color: whitesmoke; */
 }
 .card-body {
@@ -680,6 +662,15 @@ p {
   transition-delay: 0s !important;
   transition-duration: 0.3s !important;
   cursor: pointer;
+}
+.addition {
+  min-width: 0;
+  font-size: 14px;
+  margin-top: 1rem;
+  text-align: left;
+}
+h2 {
+  padding-top: 1.5rem;
 }
 // @include media-breakpoint-up(sm) {
 //   .ux_container .selected_card {

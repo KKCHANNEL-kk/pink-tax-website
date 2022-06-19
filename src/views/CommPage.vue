@@ -1,12 +1,11 @@
 <template>
   <div>
-    <hello-world-vue></hello-world-vue>
     <b-container>
       <div
+        style="width: 100%"
         class="flourish-embed flourish-hierarchy"
         data-src="visualisation/10390634"
-      >
-      </div>
+      ></div>
     </b-container>
     <Jumbotron :img="title_pic_path[0]" title=" " subtitle=" "> </Jumbotron>
     <Jumbotron :img="title_pic_path[1]" title=" " subtitle=" "> </Jumbotron>
@@ -16,12 +15,11 @@
 </template>
 
 <script>
-import HelloWorldVue from "@/components/HelloWorld.vue";
+// import HelloWorldVue from "@/components/HelloWorld.vue";
 import Jumbotron from "../components/MyJumbotron.vue";
 export default {
   name: "CommPage",
   components: {
-    HelloWorldVue,
     Jumbotron,
   },
   data() {
