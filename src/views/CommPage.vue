@@ -1,13 +1,39 @@
 <template>
-  <HelloWorldVue msg="Welcome to Your Vue.js App" />
+  <div>
+    <hello-world-vue></hello-world-vue>
+    <testRoll></testRoll>
+    <Jumbotron :img="title_pic_path[0]" title=" " subtitle=" "> </Jumbotron>
+    <Jumbotron :img="title_pic_path[1]" title=" " subtitle=" "> </Jumbotron>
+    <Jumbotron :img="title_pic_path[2]" title=" " subtitle=" "> </Jumbotron>
+    <Jumbotron :img="title_pic_path[3]" title=" " subtitle=" "> </Jumbotron>
+  </div>
 </template>
 
 <script>
 import HelloWorldVue from "@/components/HelloWorld.vue";
+import testRoll from "../components/testRoll.vue";
+import Jumbotron from "../components/MyJumbotron.vue";
 export default {
   name: "CommPage",
   components: {
     HelloWorldVue,
+    testRoll,
+    Jumbotron,
+  },
+  data() {
+    return {
+      title_pic_path: [
+        require("@/assets/title_1.png"),
+        require("@/assets/title_2.png"),
+        require("@/assets/title_3.png"),
+        require("@/assets/title_4.png"),
+      ],
+    };
   },
 };
 </script>
+<style scoped>
+.bg_container {
+  margin-bottom: 50vh;
+}
+</style>

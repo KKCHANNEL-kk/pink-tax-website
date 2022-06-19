@@ -246,7 +246,7 @@ export default {
         this.tips[key].value
       );
     });
-    console.log(this.contents);
+    // console.log(this.contents);
   },
   methods: {
     getContent: function (name, value) {

@@ -49,9 +49,32 @@
             </div>
           </div>
         </div>
-        <div id="result1" v-else-if="selected_status == 2" key="q1_chart">
-          <v-chart class="chart" ref="diagram" :option="piechart_options" />
-        </div>
+        <b-container
+          fluid
+          id="result1"
+          v-else-if="selected_status == 2"
+          key="q1_chart"
+        >
+          <b-row>
+            <b-col>
+              <h2>
+                有{{
+                  ((this.same_a1 / this.sum_a1) * 100).toFixed(2)
+                }}%的人和你做出一样的选择
+              </h2>
+            </b-col>
+          </b-row>
+          <b-row style="width=100%" fluid>
+            <b-col>
+              <v-chart
+                class="chart"
+                ref="diagram"
+                :option="piechart_options"
+                :theme="chartTheme"
+              />
+            </b-col>
+          </b-row>
+        </b-container>
       </transition>
     </div>
 
@@ -130,7 +153,12 @@
         </p>
         <p class="text-left display-6">置身“粉红税”陷阱当中的“她”们</p>
         <div id="result2" key="q2_chart">
-          <v-chart class="chart" ref="diagram" :option="sankey_options" />
+          <v-chart
+            class="chart"
+            ref="diagram"
+            :option="sankey_options"
+            :theme="chartTheme"
+          />
         </div>
         <p>
           据电商平台上抓取的不同商品价格数据反映，从儿童玩具、成人服饰到老年用品，女用商品通常要比男用商品均价要高（待求证），且这些商品往往在核心功能上并无差异。此类溢价现象通常表现为，同一品牌同一设计下，粉色商品要比其他颜色的商品贵。甚至有时仅仅将商品名称条目中的“女”，更改成“男”，就产生了不可忽视的价格差。
@@ -217,7 +245,7 @@
         <p>
           另一方面，既有法律所涉及的范围具有极大的局限性。在废除粉红税的法律体系中，商家依然被允许通过延长服务时间、提高服务成本和难度来设计更高的标价，而有关产品的价格歧视并不在法律的约束范围内。同时，国会两院拟议的《粉红税废除法案》几经波折，除了部分成员的阻挠，诸如“辨别何为‘类似产品’”等细节定义也成为阻碍推进立法的绊脚石。直到报道的今天，该法案始终停留在“提出草案”的第一步，在它之后，还有“众议院通过-参议院通过-总统批准-颁布法律”的漫漫长路。
         </p>
-        <p>国会法时间轴 todo</p>
+        <div class="container"><law-time-line></law-time-line></div>
       </section>
     </div>
 
@@ -250,6 +278,11 @@ import {
 import VChart from "vue-echarts";
 import Jumbotron from "../components/MyJumbotron.vue";
 import TimeLine from "../components/icons/TimeLine.vue";
+import LawTimeLine from "../components/icons/LawTimeLine.vue";
+
+import * as echarts from "echarts";
+import themeVintage from "@/assets/js/echartsTheme/vintage.json";
+echarts.registerTheme("vintage", themeVintage);
 
 use([
   CanvasRenderer,
@@ -264,28 +297,36 @@ export default {
     VChart,
     Jumbotron,
     TimeLine,
+    LawTimeLine,
   },
   data() {
     return {
       selected_status: 0,
       piechart_data: [82, 105, 1, 80],
+      same_a1: 0,
+      sum_a1: 0,
       ans: 0,
       piechart_options: {
         tooltip: {
           trigger: "item",
-          formatter: "{a} <br/>{b} : {c} ({d}%)",
+          triggerOn: "mousemove",
         },
         legend: {
           orient: "vertical",
           left: "left",
-          data: ["先男后男", "先男后女", "先女后男", "先女后女"],
+          data: [
+            "男性包装->男性包装",
+            "男性包装->女性包装",
+            "女性包装->男性包装",
+            "女性包装->女性包装",
+          ],
         },
         series: [
           {
             type: "pie",
-            radius: "50%",
-            center: ["50%", "60%"],
-            data: [],
+            radius: "80%",
+            center: ["50%", "50%"],
+            data: [1, 1, 1, 1],
             emphasis: {
               itemStyle: {
                 shadowBlur: 10,
@@ -297,54 +338,101 @@ export default {
         ],
       },
       sankey_options: {
+        tooltip: {
+          trigger: "item",
+          formatter: "{a} <br/>{b} : {c} ({d}%)",
+        },
         series: {
           type: "sankey",
           layout: "none",
+          right: "15%",
           emphasis: {
             focus: "adjacency",
           },
           data: [
             {
               name: "键盘--粉色",
+              itemStyle: {
+                color: "rgba(242, 167, 171,1)",
+              },
             },
             {
               name: "粉色--75元",
+              itemStyle: {
+                color: "rgba(242, 167, 171,0.7)",
+              },
             },
             {
               name: "白色--60元",
+              itemStyle: {
+                color: "rgba(230, 230, 230,0.7)",
+              },
             },
             {
               name: "黑色--60元",
+              itemStyle: {
+                color: "rgba(0, 0, 0,0.7)",
+              },
             },
             {
               name: "雨伞--粉色",
+              itemStyle: {
+                color: "rgba(244, 212, 215,1)",
+              },
             },
             {
               name: "灰色--65元",
+              itemStyle: {
+                color: "rgba(142, 147, 151,0.7)",
+              },
             },
             {
               name: "粉色--79元",
+              itemStyle: {
+                color: "rgba(244, 212, 215,0.7)",
+              },
             },
             {
               name: "蓝色--65元",
+              itemStyle: {
+                color: "rgba(191, 217, 241,0.7)",
+              },
             },
             {
               name: "行李箱--冰川蓝",
+              itemStyle: {
+                color: "rgba(190, 203, 209,1)",
+              },
             },
             {
               name: "行李箱--少女粉",
+              itemStyle: {
+                color: "rgba(226, 202, 202,1)",
+              },
             },
             {
               name: "冰川蓝--399元",
+              itemStyle: {
+                color: "rgba(190, 203, 209,0.7)",
+              },
             },
             {
               name: "少女粉--399元",
+              itemStyle: {
+                color: "rgba(226, 202, 202,0.7)",
+              },
             },
             {
               name: "经典深蓝--299元",
+              itemStyle: {
+                color: "rgba(61, 70, 85,0.7)",
+              },
             },
             {
               name: "经典黑--299元",
+              itemStyle: {
+                color: "rgba(35, 35, 35,0.7)",
+              },
             },
           ],
           links: [
@@ -352,79 +440,137 @@ export default {
               source: "键盘--粉色",
               target: "粉色--75元",
               value: 18,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
             },
             {
               source: "键盘--粉色",
               target: "白色--60元",
               value: 10,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
             },
             {
               source: "键盘--粉色",
               target: "黑色--60元",
               value: 6,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
             },
             {
               source: "雨伞--粉色",
               target: "灰色--65元",
               value: 8,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
             },
             {
               source: "雨伞--粉色",
               target: "粉色--79元",
               value: 14,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
             },
             {
               source: "雨伞--粉色",
               target: "蓝色--65元",
               value: 18,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
             },
             {
               source: "行李箱--冰川蓝",
               target: "冰川蓝--399元",
               value: 59,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
             },
             {
               source: "行李箱--冰川蓝",
               target: "少女粉--399元",
               value: 2,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
             },
             {
               source: "行李箱--冰川蓝",
               target: "经典深蓝--299元",
               value: 30,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
             },
             {
               source: "行李箱--冰川蓝",
               target: "经典黑--299元",
               value: 33,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
             },
             {
               source: "行李箱--少女粉",
               target: "冰川蓝--399元",
               value: 2,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
             },
             {
               source: "行李箱--少女粉",
               target: "少女粉--399元",
               value: 26,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
             },
             {
               source: "行李箱--少女粉",
               target: "经典深蓝--299元",
               value: 8,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
             },
             {
               source: "行李箱--少女粉",
               target: "经典黑--299元",
               value: 19,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
             },
           ],
         },
       },
+      chartTheme: "vintage",
       title_pic_path: [require("@/assets/title_1.png")],
     };
   },
   created() {
+    this.sum_a1 = this.piechart_data.reduce((a, b) => a + b, 0);
     // this.axios.get("/api/question1").then(() => {
     //   this.piechart_options.series[0].data = [
     //     { value: 1, name: "男性包装" },
@@ -448,23 +594,27 @@ export default {
           this.ans = ans * 10 + this.ans;
           switch (this.ans) {
             case 0:
+              this.same_a1 = this.piechart_data[0];
               this.piechart_data[0]++;
               break;
             case 1:
+              this.same_a1 = this.piechart_data[1];
               this.piechart_data[1]++;
               break;
             case 10:
+              this.same_a1 = this.piechart_data[2];
               this.piechart_data[2]++;
               break;
             case 11:
+              this.same_a1 = this.piechart_data[3];
               this.piechart_data[3]++;
               break;
           }
           this.piechart_options.series[0].data = [
-            { value: this.piechart_data[0], name: "先男后男" },
-            { value: this.piechart_data[1], name: "先女后男" },
-            { value: this.piechart_data[2], name: "先男后女" },
-            { value: this.piechart_data[3], name: "先女后女" },
+            { value: this.piechart_data[0], name: "男性包装->男性包装" },
+            { value: this.piechart_data[1], name: "女性包装->男性包装" },
+            { value: this.piechart_data[2], name: "男性包装->女性包装" },
+            { value: this.piechart_data[3], name: "女性包装->女性包装" },
           ];
           break;
         }
@@ -524,8 +674,8 @@ p {
 .ux_container .selected_card {
   /* 相对定位 */
   position: relative;
-  width: 15rem;
-  height: 15rem;
+  width: 20rem;
+  height: 20rem;
   background-color: white;
   margin: 30px;
   border-radius: 10px;
@@ -552,13 +702,15 @@ p {
   height: 100%;
 }
 #result1 {
-  height: 100%;
+  /* height: 100%;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: center; */
 }
 .chart {
-  height: 350px;
+  height: 500px;
+  width: 100%;
+  min-height: 100%;
   min-width: 100%;
 }
 

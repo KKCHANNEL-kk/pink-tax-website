@@ -1,0 +1,280 @@
+<template>
+  <svg
+    id="图层_1"
+    data-name="图层 1"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1419.99 1642.17"
+  >
+    <defs></defs>
+    <title>流程图</title>
+    <path
+      class="cls-1"
+      d="M551.19,543.47a15.47,15.47,0,0,0,15.67,15.28h440.8a15.47,15.47,0,0,0,15.67-15.28V356.78a15.47,15.47,0,0,0-15.67-15.28H566.86a15.47,15.47,0,0,0-15.67,15.28Z"
+      transform="translate(-303.42 -208.96)"
+    />
+    <text class="cls-2" transform="translate(291.93 293.01) scale(1.07 1)">
+      1995
+    </text>
+    <path
+      class="cls-3"
+      d="M1017.14,963.29a15.47,15.47,0,0,0,15.67,15.28h440.8a15.47,15.47,0,0,0,15.67-15.28V776.6a15.47,15.47,0,0,0-15.67-15.28h-440.8a15.47,15.47,0,0,0-15.67,15.28Z"
+      transform="translate(-303.42 -208.96)"
+    />
+    <text class="cls-2" transform="translate(780.34 716.19) scale(1.07 1)">
+      1997
+    </text>
+    <path
+      class="cls-4"
+      d="M1015,1795.71c0,8.44,7.12,15.28,15.91,15.28h447.76c8.79,0,15.91-6.84,15.91-15.28V1609c0-8.44-7.12-15.28-15.91-15.28H1030.88c-8.79,0-15.91,6.84-15.91,15.28Z"
+      transform="translate(-303.42 -208.96)"
+    />
+    <path
+      class="cls-5"
+      d="M551.19,1373.57a15.49,15.49,0,0,0,15.7,15.28h441.67a15.49,15.49,0,0,0,15.7-15.28v-186.7a15.49,15.49,0,0,0-15.7-15.28H566.89a15.5,15.5,0,0,0-15.7,15.28Z"
+      transform="translate(-303.42 -208.96)"
+    />
+    <rect class="cls-6" x="709.69" y="38.79" width="11.16" height="1603.38" />
+    <path
+      class="cls-7"
+      d="M1059.52,247.75c0,21.15-18.28,38.3-40.83,38.3s-40.83-17.15-40.83-38.3,18.28-38.29,40.83-38.29S1059.52,226.6,1059.52,247.75Z"
+      transform="translate(-303.42 -208.96)"
+    />
+    <path
+      class="cls-8"
+      d="M1042.24,247.75c0,12.2-10.55,22.09-23.55,22.09s-23.55-9.89-23.55-22.09,10.54-22.09,23.55-22.09S1042.24,235.55,1042.24,247.75Z"
+      transform="translate(-303.42 -208.96)"
+    />
+    <path
+      class="cls-9"
+      d="M1059.52,662c0,21.16-18.28,38.3-40.83,38.3s-40.83-17.14-40.83-38.3,18.28-38.29,40.83-38.29S1059.52,640.81,1059.52,662Z"
+      transform="translate(-303.42 -208.96)"
+    />
+    <path
+      class="cls-10"
+      d="M1042.24,662c0,12.2-10.55,22.09-23.55,22.09s-23.55-9.89-23.55-22.09,10.54-22.08,23.55-22.08S1042.24,649.76,1042.24,662Z"
+      transform="translate(-303.42 -208.96)"
+    />
+    <path
+      class="cls-11"
+      d="M1059.52,1076.18c0,21.15-18.28,38.29-40.83,38.29s-40.83-17.14-40.83-38.29,18.28-38.3,40.83-38.3S1059.52,1055,1059.52,1076.18Z"
+      transform="translate(-303.42 -208.96)"
+    />
+    <path
+      class="cls-5"
+      d="M1042.24,1076.18c0,12.2-10.55,22.08-23.55,22.08s-23.55-9.88-23.55-22.08,10.54-22.09,23.55-22.09S1042.24,1064,1042.24,1076.18Z"
+      transform="translate(-303.42 -208.96)"
+    />
+    <path
+      class="cls-12"
+      d="M1059.52,1490.39c0,21.15-18.28,38.29-40.83,38.29s-40.83-17.14-40.83-38.29,18.28-38.29,40.83-38.29S1059.52,1469.24,1059.52,1490.39Z"
+      transform="translate(-303.42 -208.96)"
+    />
+    <path
+      class="cls-13"
+      d="M1042.24,1490.39c0,12.2-10.55,22.09-23.55,22.09s-23.55-9.89-23.55-22.09,10.54-22.09,23.55-22.09S1042.24,1478.19,1042.24,1490.39Z"
+      transform="translate(-303.42 -208.96)"
+    />
+    <g class="cls-14">
+      <text class="cls-15" transform="translate(53.91 1319.73) scale(1.07 1)">
+        纽约州
+      </text>
+    </g>
+    <text class="cls-16" transform="translate(1169.58 889.31) scale(1.07 1)">
+      纽约市
+    </text>
+    <g class="cls-14">
+      <text class="cls-17" transform="translate(53.91 491.3) scale(1.07 1)">
+        马塞诸塞州
+      </text>
+    </g>
+    <g class="cls-14">
+      <text class="cls-18" transform="translate(1014.49 77.09) scale(1.07 1)">
+        加利福尼亚州
+      </text>
+    </g>
+    <path
+      class="cls-19"
+      d="M1723.42,578c0,11.55-10.07,20.92-22.49,20.92h-689c-12.42,0-22.48-9.37-22.48-20.92V322.29c0-11.55,10.06-20.92,22.48-20.92h689c12.42,0,22.49,9.37,22.49,20.92Z"
+      transform="translate(-303.42 -208.96)"
+    />
+    <text class="cls-20" transform="translate(767.95 220.91) scale(1.07 1)">
+      <tspan class="cls-21">禁止在</tspan>
+      <tspan class="cls-22" x="247.43" y="0">服务定价</tspan>
+      <tspan class="cls-21">
+        <tspan x="0" y="97">方面的性别歧视</tspan>
+      </tspan>
+    </text>
+    <path
+      class="cls-23"
+      d="M1723.42,1408.06c0,11.56-10,20.93-22.32,20.93H1017.45c-12.33,0-22.31-9.37-22.31-20.93V1152.39c0-11.56,10-20.93,22.31-20.93H1701.1c12.33,0,22.32,9.37,22.32,20.93Z"
+      transform="translate(-303.42 -208.96)"
+    />
+    <text class="cls-20" transform="translate(767.95 1051) scale(1.07 1)">
+      <tspan class="cls-21">禁止在</tspan>
+      <tspan class="cls-24" x="247.43" y="0">服务定价</tspan>
+      <tspan class="cls-21">
+        <tspan x="0" y="97">方面的性别歧视</tspan>
+      </tspan>
+    </text>
+    <path
+      class="cls-25"
+      d="M305.84,997.78c0,11.56,10.09,20.93,22.56,20.93h691.28c12.46,0,22.56-9.37,22.56-20.93V742.11c0-11.56-10.1-20.93-22.56-20.93H328.4c-12.47,0-22.56,9.37-22.56,20.93Z"
+      transform="translate(-303.42 -208.96)"
+    />
+    <text class="cls-26" transform="translate(53.91 650.46) scale(1.07 1)">
+      禁止在
+      <tspan class="cls-27" x="240" y="0">美容服务</tspan>
+      <tspan x="0" y="96">中实行性别定价</tspan>
+    </text>
+    <path
+      class="cls-28"
+      d="M303.42,1830.2c0,11.56,10.13,20.93,22.64,20.93H1019.6c12.51,0,22.64-9.37,22.64-20.93V1574.53c0-11.56-10.13-20.93-22.64-20.93H326.06c-12.51,0-22.64,9.37-22.64,20.93Z"
+      transform="translate(-303.42 -208.96)"
+    />
+    <text class="cls-29" transform="translate(43.09 1447.56) scale(1.07 1)">
+      取消粉红税，弥补男女
+      <tspan x="0" y="74.4">在购买</tspan>
+      <tspan class="cls-30" x="186" y="74.4">相同或类似产</tspan>
+      <tspan class="cls-31">
+        <tspan class="cls-14" x="0" y="148.8">品</tspan>
+        <tspan class="cls-32" x="62" y="148.8">时所产生的差价</tspan>
+      </tspan>
+    </text>
+    <text class="cls-2" transform="translate(792.33 1548.61) scale(1.07 1)">
+      2020
+    </text>
+    <text class="cls-2" transform="translate(291.93 1123.1) scale(1.07 1)">
+      1998
+    </text>
+    <text x="-303.42" y="-208.96" />
+    <text x="-303.42" y="-208.96" />
+    <text x="-303.42" y="-208.96" />
+  </svg>
+</template>
+<style>
+.cls-1 {
+  fill: #6773ae;
+}
+.cls-1,
+.cls-10,
+.cls-13,
+.cls-14,
+.cls-15,
+.cls-16,
+.cls-19,
+.cls-23,
+.cls-25,
+.cls-28,
+.cls-3,
+.cls-30,
+.cls-4,
+.cls-5,
+.cls-8 {
+  opacity: 0.9;
+}
+.cls-2 {
+  font-size: 123px;
+}
+.cls-2,
+.cls-20,
+.cls-26,
+.cls-29,
+.cls-32 {
+  fill: #fff;
+}
+.cls-15,
+.cls-16,
+.cls-17,
+.cls-18,
+.cls-2,
+.cls-20,
+.cls-26,
+.cls-29 {
+  font-family: CangErYuMoW04-2, CangErYuMo;
+}
+.cls-17,
+.cls-27,
+.cls-3 {
+  fill: #cb5c86;
+}
+.cls-4 {
+  fill: #ba7bb2;
+}
+.cls-5 {
+  fill: #efad31;
+}
+.cls-6 {
+  fill: #363536;
+}
+.cls-11,
+.cls-12,
+.cls-7,
+.cls-9 {
+  fill: #ebedf0;
+  stroke-miterlimit: 10;
+}
+.cls-7 {
+  stroke: #70adcf;
+}
+.cls-8 {
+  fill: #70adcf;
+}
+.cls-9 {
+  stroke: #678192;
+}
+.cls-10 {
+  fill: #ca467d;
+}
+.cls-11 {
+  stroke: #efad31;
+}
+.cls-12 {
+  stroke: #d35921;
+}
+.cls-13 {
+  fill: #bb8dbe;
+}
+.cls-15,
+.cls-16,
+.cls-17,
+.cls-18 {
+  font-size: 58px;
+}
+.cls-15,
+.cls-30,
+.cls-31 {
+  fill: #aa659c;
+}
+.cls-16,
+.cls-24 {
+  fill: #ca8f00;
+}
+.cls-18,
+.cls-22 {
+  fill: #516fae;
+}
+.cls-19 {
+  fill: #94a7c8;
+}
+.cls-20 {
+  font-size: 79px;
+}
+.cls-21 {
+  letter-spacing: 0.04em;
+}
+.cls-23 {
+  fill: #f6c269;
+}
+.cls-25 {
+  fill: #f1a4a8;
+}
+.cls-26 {
+  font-size: 80px;
+}
+.cls-28 {
+  fill: #d1a4c9;
+}
+.cls-29 {
+  font-size: 62px;
+}
+</style>

@@ -11,9 +11,9 @@
           <b-nav-item to="/PricePage" exact exact-active-class="active"
             >价格实时</b-nav-item
           >
-          <!-- <b-nav-item to="/CommPage" exact exact-active-class="active"
-            >舆情实时</b-nav-item
-          > -->
+          <b-nav-item to="/CommPage" exact exact-active-class="active"
+            >舆情实时(组件备注)</b-nav-item
+          >
         </b-nav>
       </b-card-header>
 
