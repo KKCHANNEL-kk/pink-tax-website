@@ -6,7 +6,7 @@
         header-tag="nav"
       >
         <b-nav card-header>
-          <b-navbar-brand tag="h1" class="mb-0">数据新闻</b-navbar-brand>
+          <b-navbar-brand tag="h1" class="mb-0">被粉饰的迷局</b-navbar-brand>
           <b-nav-item to="/" exact exact-active-class="active">首页</b-nav-item>
           <b-nav-item to="/PricePage" exact exact-active-class="active"
             >价格实时</b-nav-item
