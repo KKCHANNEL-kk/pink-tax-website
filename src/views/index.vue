@@ -114,6 +114,13 @@
           注：鼠标点击，查看具有粉红税效应的各类目及详细数据；点击右上角箭头或空白处返回上一级
           <br />数据来源：纽约市消费者事务部
         </p>
+        <b-container>
+          <div
+            style="width: 85%"
+            class="flourish-embed flourish flourish-hierarchy"
+            data-src="visualisation/10393400"
+          ></div>
+        </b-container>
         <p>
           反观国内，“粉红税”的概念却鲜为国内大众知晓，我们不禁好奇“粉红税”陷阱是否蔓延在当下的国内市场？价格背后，是谁在操盘“粉红”法则？针对一系列疑问，我们在京东电商平台，针对23种中性商品抓取的20608条商品信息进行数据分析，探寻粉红税的踪迹；此外，我们参与式观察豆瓣小组、抖音评论区，针对抓取的1335条帖子中的30391条评论进行内容分析与文本分析，延伸粉红税概念背后的不同面向。
         </p>
@@ -275,9 +282,9 @@ import {
   LegendComponent,
 } from "echarts/components";
 import VChart from "vue-echarts";
-import Jumbotron from "../components/MyJumbotron.vue";
-import TimeLine from "../components/icons/TimeLine.vue";
-import LawTimeLine from "../components/icons/LawTimeLine.vue";
+import Jumbotron from "@/components/MyJumbotron.vue";
+import TimeLine from "@/components/icons/TimeLine";
+import LawTimeLine from "@/components/icons/LawTimeLine.vue";
 
 import * as echarts from "echarts";
 import themeVintage from "@/assets/js/echartsTheme/vintage.json";
@@ -746,12 +753,12 @@ h2 {
   width: 100%;
   height: 100%;
 }
-#result1 {
-  /* height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center; */
-}
+// #result1 {
+//   /* height: 100%;
+//   width: 100%;
+//   display: flex;
+//   justify-content: center; */
+// }
 .chart {
   height: 500px;
   width: 100%;
