@@ -1,6 +1,13 @@
 <template>
   <div>
     <!-- <h1 class="text-center display-1">被粉饰的迷局</h1> -->
+    <Jumbotron
+      :img="title_pic_path[0]"
+      :title="this.pinkTitle"
+      subtitle="货架上的“粉红税”陷阱"
+    >
+    </Jumbotron>
+    <div></div>
     <div class="content container" style="height: 100%; min-height: 95vh">
       <transition
         name="fade"
@@ -88,13 +95,6 @@
       </transition>
     </div>
 
-    <Jumbotron
-      :img="title_pic_path[0]"
-      title="被粉饰的迷局: "
-      subtitle="货架上的“粉红税”陷阱"
-    >
-    </Jumbotron>
-
     <div class="content container">
       <section id="intro">
         <p>
@@ -107,7 +107,7 @@
           <div
             style="width: 85%"
             class="flourish-embed flourish flourish-hierarchy"
-            data-src="visualisation/10390634"
+            data-src="visualisation/10522352"
           ></div>
         </b-container>
         <p class="addition">
@@ -234,6 +234,13 @@
         <div class="container" style="width: 80%">
           <law-time-line></law-time-line>
         </div>
+        <b-container>
+          <div
+            style="width: 85%"
+            class="flourish-embed flourish-map"
+            data-src="visualisation/10525586"
+          ></div>
+        </b-container>
         <div class="addition">数据来源：网络搜索，westlaw</div>
         <p>
           现如今，少数州和地方立法机构已经采取相关措施，禁止了基于性别的服务定价，但美国依然在禁止粉红税在司法和立法过程中面临诸多挑战。一方面，尽管存在上述出台法律的支持，但因同类商品存在价格差异而与商家对簿公堂的消费者依然少之又少。从法律全文数据库Westlaw检索结果来看，有关性别歧视性定价的案件仅有6例，而除去上诉案件的审理，只有3位消费者就该问题向法院提出诉讼，并皆以败诉告终。
@@ -267,6 +274,7 @@
         <p>
           当然，进一步有进一步的欢喜。近年来，性别中立的营销方式越来越得到认可，从产品设计、开发、生产到推广，各个环节都更注重打破传统性别叙事，提倡给予女性更多自主选择权、倡导女性审美多元化。而2021年1月15日推出的《深圳市广告性别平等审视指南》也同样释放了关注两性定价平等的积极信号，成为制度探索路上踏出的勇敢一步。但破除“粉红税”的道路究竟有多漫长，只有当更多人亲身踏上征途方能体会。
         </p>
+        <tag-cloud></tag-cloud>
       </section>
     </div>
   </div>
@@ -290,6 +298,9 @@ import * as echarts from "echarts";
 import themeVintage from "@/assets/js/echartsTheme/vintage.json";
 echarts.registerTheme("vintage", themeVintage);
 
+// import * as floatingjs from "./floating.js";
+import TagCloud from "@/components/TagCloud.vue";
+
 use([
   CanvasRenderer,
   PieChart,
@@ -304,6 +315,7 @@ export default {
     Jumbotron,
     TimeLine,
     LawTimeLine,
+    TagCloud,
   },
   data() {
     return {
@@ -580,9 +592,10 @@ export default {
       },
       chartTheme: "vintage",
       title_pic_path: [
-        require("@/assets/title_5.png"),
-        require("@/assets/title_6.png"),
+        require("@/assets/rolling_bg_5.gif"),
+        require("@/assets/title_8.png"),
       ],
+      pinkTitle: `被<span style='color:pink'>粉</span>饰的迷局: `,
     };
   },
   created() {
@@ -637,7 +650,9 @@ export default {
       }
     },
   },
-  mounted() {},
+  mounted() {
+    // floatingjs.rollingOnLoad();
+  },
 };
 </script>
 
@@ -670,8 +685,10 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("@/assets/bg.png");
-  background-attachment: fixed;
+  background: #f0eaec;
+  padding: 0rem 1rem;
+  // background-image: url("@/assets/bg.png");
+  // background-attachment: fixed;
   /* background-position: top center; */
 }
 .ux_container {
@@ -749,6 +766,7 @@ h2 {
 }
 
 .content {
+  font-family: "Halant", serif;
   margin: 0 auto;
   width: 100%;
   height: 100%;

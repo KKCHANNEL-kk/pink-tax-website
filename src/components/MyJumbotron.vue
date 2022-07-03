@@ -5,14 +5,14 @@
   >
     <p
       class="text-center display-1 font-weight-bold"
-      style="top: 15%; font-weight: 500; text-shadow: black 0.1em 0.1em 0.2em"
+      style="top: 20%; font-weight: 500; text-shadow: black 0.1em 0.1em 0.2em"
     >
       {{ title }}
     </p>
     <p
       class="text-center display-1 font-weight-bold"
       style="
-        bottom: 15%;
+        bottom: 25%;
         font-weight: 500;
         text-shadow: black 0.1em 0.1em 0.2em;
       "
@@ -36,7 +36,7 @@ export default {
 <style>
 .bg_container {
   width: 100vw;
-  height: 70vh;
+  height: 125vh;
   background-attachment: fixed;
   background-position: top center;
   background-size: cover;

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <b-card title="Card Title" no-body>
-      <b-card-header
+      <!-- <b-card-header
         style="background-color: rgb(220, 110, 120)"
         header-tag="nav"
       >
@@ -11,11 +11,11 @@
           <b-nav-item to="/PricePage" exact exact-active-class="active"
             >价格实时</b-nav-item
           >
-          <!-- <b-nav-item to="/CommPage" exact exact-active-class="active"
+          <b-nav-item to="/CommPage" exact exact-active-class="active"
             >舆情实时(组件备注)</b-nav-item
-          > -->
+          >
         </b-nav>
-      </b-card-header>
+      </b-card-header> -->
 
       <b-card-body>
         <router-view></router-view>
