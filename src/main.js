@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import router from "./router";
 // import VueCompositionAPI from "@vue/composition-api";
-// import animated from "animate.css";
+import "animate.css";
 
 import VueTippy, { TippyComponent } from "vue-tippy";
 Vue.use(VueTippy);

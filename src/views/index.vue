@@ -1,13 +1,13 @@
 <template>
   <div>
-    <!-- <h1 class="text-center display-1">被粉饰的迷局</h1> -->
+    <!-- 封面GIF -->
     <Jumbotron
       :img="title_pic_path[0]"
       :title="this.pinkTitle"
       subtitle="货架上的“粉红税”陷阱"
     >
     </Jumbotron>
-    <div></div>
+    <!-- 布洛芬互动 -->
     <div class="content container" style="height: 100%; min-height: 95vh">
       <transition
         name="fade"
@@ -16,7 +16,7 @@
       >
         <div v-if="selected_status == 0" key="q1_before">
           <p class="text-center display-6">
-            当你需要购买一盒布洛芬止痛片时<br />有以下两种选择（二者功效相当）<br />你的选择是？
+            布洛芬是一款可用于减轻疼痛的药品。<br />当你需要购买一盒布洛芬止痛片时<br />有以下两种选择（二者功效相当）<br />你的选择是？
           </p>
           <div class="ux_container container" id="question1">
             <div class="selected_card">
@@ -56,6 +56,7 @@
             </div>
           </div>
         </div>
+        <!-- 互动结果展示 -->
         <b-container
           fluid
           id="result1"
@@ -88,59 +89,89 @@
           </b-row>
           <b-row>
             <b-col>
-              <h3 class="text-center display-3">↓下滑展开正文↓</h3>
+              <div class="content container">
+                <section id="HCI_result">
+                  <p>
+                    上述场景虽然只是一次消费选择的模拟实验，但这个价目数据却来自现实生活。实际上，两盒布洛芬规格相同，成分与功能相同，仅因包装和商品分类标签的差异，就将其划分了“经典止痛款”和“缓和女性痛经款”两类，制定了不同的价目。诸如此类，若你留心观察，试图在购物网页依据不同的性别标签检索其他商品如童装、洗发水、老年钙片等，结果或许也会让你大吃一惊。这种现象，在国外学界被视作典型的“粉红税（Pink
+                    Tax）”陷阱。
+                  </p>
+                </section>
+              </div>
             </b-col>
           </b-row>
         </b-container>
       </transition>
     </div>
 
+    <Jumbotron :img="title_pic_path[1]" title="被粉饰的迷局" subtitle=" ">
+    </Jumbotron>
     <div class="content container">
       <section id="intro">
         <p>
-          5月26日，一条关于“粉红税”的科普视频再抖音上收获了24万点赞，ID名为“淦诗琪”的博主在其中提到，“女性一生可能要比男性多花68w元”引发评论区内争议。“粉红税”并非一项”看得见“的税目，其表现形式为：当产品或服务在核心功能表现上完全相同或相似，针对不同性别，制定不同的定价，致使女性在同类商品消费中支出更高。
+          “粉红税”并非是一项的“看得见”的税目，其表现形式为：当产品或服务在核心功能表现上完全相同或相似，针对不同性别，制定不同的定价，致使女性在同类商品消费中支出更高。
         </p>
         <p>
-          “粉红税”并非一个新兴概念，目前国外已有相关研究与行业法规。纽约消费者事务部2015年发布的一项报告指出，针对女性的同类产品比男性同类产品贵7%，其中女性个护产品比男性贵13%；而早在1996年，美国加利福尼亚州威尔逊州长便出台了《废除性别税法》，目的为了抑制商家在销售核心功能相同，提供时间成本相同的服务时，针对男女性消费者制定不同定价的行为。
+          但目前而言，这场被“粉”饰的迷局略显朦胧，关乎“粉红税”的迷思也接连不断。它们隐藏于纷繁的商品货架之间，如若没有庞大商品基数之上的横向对比，也被难以察觉。
         </p>
-        <b-container>
-          <div
-            style="width: 85%"
-            class="flourish-embed flourish flourish-hierarchy"
-            data-src="visualisation/10522352"
-          ></div>
-        </b-container>
-        <p class="addition">
-          注：鼠标点击，查看具有粉红税效应的各类目及详细数据；点击右上角箭头或空白处返回上一级
-          <br />数据来源：纽约市消费者事务部
-        </p>
-        <b-container>
-          <div
-            style="width: 85%"
-            class="flourish-embed flourish flourish-hierarchy"
-            data-src="visualisation/10393400"
-          ></div>
-        </b-container>
         <p>
-          反观国内，“粉红税”的概念却鲜为国内大众知晓，我们不禁好奇“粉红税”陷阱是否蔓延在当下的国内市场？价格背后，是谁在操盘“粉红”法则？针对一系列疑问，我们在京东电商平台，针对23种中性商品抓取的20608条商品信息进行数据分析，探寻粉红税的踪迹；此外，我们参与式观察豆瓣小组、抖音评论区，针对抓取的1335条帖子中的30391条评论进行内容分析与文本分析，延伸粉红税概念背后的不同面向。
+          基于此，我们不禁好奇——“粉红税”陷阱是否蔓延在当下的国内市场？大众对此究竟认知如何？价格背后，是谁在操盘“粉红”法则？这期间究竟是市场主体的推波助澜，还是社会文化的驱动？
+        </p>
+        <p>
+          针对一系列疑问，我们在京东电商平台，针对23种中性商品抓取的20608条商品信息进行数据分析，试图探寻粉红税的具象踪迹；为进一步倾听民众的想法，我们参与式观察豆瓣小组、抖音评论区，并针对抓取到的1335条帖子，30391条评论进行内容分析与文本分析，再于其中找到渴求发声的人群，倾听与记录他们的声音，以期延伸“粉红税”背后的各种面向。
         </p>
       </section>
     </div>
-    <div class="container">
+    <!-- <div class="container">
       <h3>从「童装」到「老年奶粉」，“粉红税”贯穿女性一生</h3>
       <time-line></time-line>
-    </div>
-
+    </div> -->
+    <Jumbotron
+      :img="title_pic_path[2]"
+      title='01. "听不见"的粉红税'
+      subtitle=" "
+    ></Jumbotron>
     <div class="content container">
-      <section id="lifejourney">
-        <p class="addition">
-          我们选取了不同年龄阶段具有代表性的中性商品，分别以“男”“女”字眼进行检索，从电商平台上抓取价格等数据并计算出均价，对比不同年龄段的男女消费者可能花费的金额。<br />
-          数据来源：京东
+      <section id="hear">
+        <p>
+          5月26日，一条关于“粉红税”的科普视频在抖音上收获了24万点赞，ID名为“淦诗琪”的博主在其中提到，“女性一生可能要比男性多花68w元”，在评论区引发争议，这也让一些网友第一次认识到这一现象。
         </p>
         <p>
-          据电商平台上抓取的不同商品价格数据反映，从儿童玩具、成人服饰到老年用品，女用商品通常要比男用商品均价要高，且这些商品往往在核心功能上并无差异。此类溢价现象通常表现为，同一品牌同一设计下，粉色商品要比其他颜色的商品贵。甚至有时仅仅将商品名称条目中的“女”，更改成“男”，就产生了不可忽视的价格差。
+          事实上，“粉红税”并非新兴概念，目前国外已有相关研究与行业法规。纽约消费者事务部2015年发布的一项报告指出，针对女性的同类产品比男性同类产品贵7%，其中女性个护产品比男性贵13%；而早在1996年，美国加利福尼亚州威尔逊州长便出台了《废除性别税法》，目的为了抑制商家在销售核心功能相同，提供时间成本相同的服务时，针对男女性消费者制定不同定价的行为。
+        </p>
+        <!-- 纽约调查可视化 -->
+        <b-container>
+          <div
+            style="width: 85%; margin: 0 auto"
+            class="flourish-embed flourish-hierarchy"
+            data-src="visualisation/10412134"
+          ></div>
+        </b-container>
+        <p>
+          反观国内，“粉红税”的概念却鲜为国内大众知晓。在巨量算数平台上检索”粉红税“话题关键词，我们发觉该词条自2021年11月建立以来，连续数月搜索指数均为个位数，在2022年5月5日，搜索指数达到峰值，但搜索指数仅为66144，且热度持续时间较短，在5月中旬之后讨论度又回归常态。相比于动辄破千万搜索指数的热点话题，”粉红税“的概念仍然显得边缘。
+        </p>
+        <!-- 豆瓣讨论区提及商品 -->
+        <b-container>
+          <div
+            style="width: 85%; margin: 0 auto"
+            class="flourish-embed flourish-hierarchy"
+            data-src="visualisation/10522352"
+          ></div>
+        </b-container>
+        <p>(待补充文本)</p>
+        <tag-cloud></tag-cloud>
+      </section>
+    </div>
+    <Jumbotron
+      :img="title_pic_path[3]"
+      title='02. "看不见"的粉红税'
+      subtitle="从「童装」到「老年奶粉」，  置身“粉红税”陷阱中的“她”们"
+    ></Jumbotron>
+    <div class="content container">
+      <section id="lifejourney1">
+        <p>
           2021年年末，大二学生雨婷在某品牌电商旗舰店内下单了一条心仪已久的女款长裤。不久后，她却发现了令人瞠目的事实：该店同时还出售男子尺码的同款长裤，在外观设计与详情描述均相同的情况下，售价却比女款便宜100元。
         </p>
+
         <p>
           同样的，ID为「注销已」的豆瓣用户在社交媒体上分享个人购物经历，得知安踏旗舰店上某款的运动鞋，女性尺码也要比男性尺码贵20元，随后向客服询问价格差异的缘由，然而只得到“优惠力度不同”的答复。
         </p>
@@ -157,17 +188,25 @@
           再者，由于大多数消费者对“粉红税”的认知有限，甚至有人认为部分商品的溢价是合理存在的，所以尽管女性在经济上要比男性付出更大代价，多数情况下不会采取进一步的维权行为，愤怒的情绪终究会被平息。作为曾经的“受害者”雨婷表示，将来如果在该店遇到了喜欢的商品，<b>“我还是会买的”</b>。
         </p>
       </section>
+      <div class="container"><FemaleChanges></FemaleChanges></div>
+      <section id="lifejourney2">
+        <p>
+          据电商平台上抓取的不同商品价格数据反映，从儿童玩具、成人服饰到老年用品，女用商品通常要比男用商品均价要高，且这些商品往往在核心功能上并无差异。此类溢价现象通常表现为，同一品牌同一设计下，粉色商品要比其他颜色的商品贵。甚至有时仅仅将商品名称条目中的“女”，更改成“男”，就产生了不可忽视的价格差。
+        </p>
+        <p>
+          以抓取到的童装价格数据为例，童装（男）的均价为139.72元，而童装（女）的均价数据为171.88元，二者价格相差超过30元。而众所周知，由于婴儿与幼童阶段，男女体格差异还不显著，服装尺码与所需布料都较为接近，二者单价差异如此之大，可以窥见问题所在。而在童装之外，许多日常用品也或多或少存在粉红税。部分顾客甚至察觉到了这一现象，对此有直观感受。
+        </p>
+      </section>
     </div>
     <Jumbotron
-      :img="title_pic_path[1]"
-      title="“粉红”法则 "
-      subtitle="谁在幕后操盘？"
+      :img="title_pic_path[4]"
+      title="03. “粉红”法则，谁在幕后操盘？"
+      subtitle="市场、文化、制度，孰是孰非"
     >
     </Jumbotron>
     <div class="content container">
       <section id="deepin">
-        <!-- <h2 class="text-center display-3">“粉红”法则，谁在背后操盘？</h2> -->
-        <p class="text-left display-6">市场主体</p>
+        <p class="text-left display-6">市场黑箱：别有用心的“性别定制”?</p>
         <p>
           偏爱粉红色、精致香味、精美包装，是消费主义时代下，女性消费者被塑造的刻板印象。当部分针对女性设计的商品被添加了特殊香料或其他成分时，更高的设计制造成本致使售价更高，这无可厚非。然而，在核心功能不变的情况下，粉色产品的定价比同款商品的其他颜色定价更高，这种现象也并不罕见。
         </p>
@@ -182,12 +221,14 @@
             />
           </div>
         </div>
+
         <p>
-          相比单纯更换商品颜色，外包装整体的更新换代，似乎为商品提价赋予了更“正当”的提价契机。以芬必得布洛芬咀嚼片为例，作为一种较为大众的止痛片，该药品的外包装盒从先前的男性人像变成女性人像，疼痛点也从先前的头部转移至女子腹部位置。
+          相比单纯更换商品颜色，外包装整体的更新换代，似乎为商品提价赋予了更“正当”的提价契机。正如报道开头的互动案例，以“芬必得”布洛芬咀嚼片为例，作为一种较为大众的止痛片，该药品的外包装盒从先前的男性人像变成女性人像，疼痛点从先前的头部转移至女子腹部位置，货架上的名称也从过往的“普通款”更改为“痛经专用款”。
         </p>
         <p>
           在佛山市某药店店主梁先生看来，新老两款布洛芬咀嚼片在成分、功效上无异，二者的重要成分布洛芬含量均为0.2克/粒。然而，在同一容量前提下，各大电商平台上标示的价格却相距甚远——新款价格却在老款基础上翻了一倍。
         </p>
+        <div class="container">【可视化】药代流程</div>
         <p>
           通过追溯药品从出厂到流入市面的流通过程，不难发现，溢价问题出现在从药品代理商到零售上这一环节上。药房订货购药一般需要通过药品代理商，同为一盒十片的芬必得布洛芬，新旧两款药均在13～16元这一区间内浮动，差别不大。至于最终面向消费者的具体售价，梁先生透露，“不同药房有着不同的定价机制”。
         </p>
@@ -195,7 +236,7 @@
           像上述雨伞、键盘、布洛芬这类产品，通过在产品功能、外观设计及广告推广方面强调男女消费者的区别，是一种性别差异化的营销策略。社会学学者Elizabeth
           Sweet在其研究中发现，在1975年的Sears百货目录中，儿童玩具对象被明确列为是男孩还是女孩的比例还不到2%；到了1995年，比例扩大到50%左右，随着消费市场的发展壮大，基于性别差异化的营销模式伴也在成人商品市场里逐渐成熟。
         </p>
-        <p class="text-left display-6">文化推手</p>
+        <p class="text-left display-6">文化推手：社会偏见与期望的共谋？</p>
         <div style="max-width: 900px">
           <b-img :src="require('@/assets/douban_text.gif')" fluid></b-img>
         </div>
@@ -215,7 +256,7 @@
         <p>
           放眼当下，即使“她经济”崛起有实然层面的数据支撑，但同样也是社会文化建构的结果。诸如“‘包’治百病”、“口红是女人的身价”的话语与标签，让女性在不经意间成为消费意识形态的理想对象，也进而为商家设置“粉红税”制造定价空间。
         </p>
-        <p class="text-left display-6">制度缺憾</p>
+        <p class="text-left display-6">制度缺憾：避税指南与空白地带</p>
         <p>
           针对商家基于性别的定价策略，部分消费者也在积极寻找对策。如部分KOL会在社交媒体平台上发布“避税清单”，如何机智运用不同关键词，检索出同一款或功能相似但价格更低的商品。如“化妆刷筒”可以用“笔筒”代替，“白T恤”可以置换成“纯棉T恤男”等等，从用途角度进行搜索，尽量避免“小众”“网红”等关键词描述。
         </p>
@@ -225,6 +266,7 @@
         <p>
           尽管针对粉红税的讨论与日俱增，但回首国内现有法律法规，类似规范尚属空白地带。
         </p>
+        <p>（国内待补充）</p>
         <p>
           2019年12月22日，纽约州长宣布纽约将推进取消粉红税的相关立法，弥补男女在购买相同或类似产品时所产生的差价。经过一年的探索，纽约州的粉红税禁令于次年10月正式实施。
         </p>
@@ -234,37 +276,45 @@
         <div class="container" style="width: 80%">
           <law-time-line></law-time-line>
         </div>
-        <b-container>
-          <div
-            style="width: 85%"
-            class="flourish-embed flourish-map"
-            data-src="visualisation/10525586"
-          ></div>
-        </b-container>
+
         <div class="addition">数据来源：网络搜索，westlaw</div>
         <p>
           现如今，少数州和地方立法机构已经采取相关措施，禁止了基于性别的服务定价，但美国依然在禁止粉红税在司法和立法过程中面临诸多挑战。一方面，尽管存在上述出台法律的支持，但因同类商品存在价格差异而与商家对簿公堂的消费者依然少之又少。从法律全文数据库Westlaw检索结果来看，有关性别歧视性定价的案件仅有6例，而除去上诉案件的审理，只有3位消费者就该问题向法院提出诉讼，并皆以败诉告终。
         </p>
+        <b-container>
+          <div
+            style="width: 85%; margin: 0 auto"
+            class="flourish-embed flourish-map"
+            data-src="visualisation/10525586"
+          ></div>
+        </b-container>
         <p>
           “男性和女性能购买面向异性销售的产品，但由于社会条件和社会对于两性期望的不同，使得女性在消费的选择上更加不公平。”2020年7月，舒尔特以克诺普科公司的除汗剂具有性别歧视性的定价方案为由，向法院起诉克诺普科公司。但由于舒尔特所依据的法规并没有涉及商品定价，其本人也没有办法就这些不同产品线的生产、研发和营销相关的成本提出任何失实指控，该案件最终以其败诉收场。在该判决书中，法官留下了他的主张：“通常，我们期望市场能够自我纠正，并依靠消费者自主购买的行为来管理市场。消费者可以选择最理想的替代品以避免那些不满意的商品。”司法将商品定价交由自由市场调解，保障女性消费者的合法权益仍任重道远。
         </p>
         <p>
           另一方面，既有法律所涉及的范围具有极大的局限性。在废除粉红税的法律体系中，商家依然被允许通过延长服务时间、提高服务成本和难度来设计更高的标价，而有关产品的价格歧视并不在法律的约束范围内。同时，国会两院拟议的《粉红税废除法案》几经波折，除了部分成员的阻挠，诸如“辨别何为‘类似产品’”等细节定义也成为阻碍推进立法的绊脚石。直到报道的今天，该法案始终停留在“提出草案”的第一步，在它之后，还有“众议院通过-参议院通过-总统批准-颁布法律”的漫漫长路。
         </p>
+        <LawTimeLine></LawTimeLine>
       </section>
     </div>
+    <Jumbotron
+      title="04.尾声：“粉红税”再思考"
+      subtitle=" "
+      :img="title_pic_path[4]"
+    >
+    </Jumbotron>
 
     <div class="content container">
       <section id="end">
-        <h2 class="text-center display-3">尾声</h2>
         <p>
           在“粉红税”陷阱依然存在的今天，“她经济”的力量究竟在多大程度得以彰显，仍值得商榷。一方面，女性背负“粉红税”，在无形中增加了生活成本；而另一方面，大量行业调查也通过两性收入对比，显现出女性的收入劣势。LuLulemon在日本制作的一份简报中指出：“在全职工作里，女性工资仅为男性的75%，而在美国用户体验设计师的行业里，女性和男性的工资差为13.7%。”智联招聘发布的《2022年职场妈妈生存状况调查报告》中的最新数据显示，职场妈妈平均薪酬为9315元/月，与职场爸爸12534元/月的薪酬水平相比，职场妈妈收入低25.7%。或许，“她经济”不应只停留在显示购买力与消费数额的表象上，女性在多大程度上拥有扭转不公平对待的强劲议价权，也是“她力量”的体现，而当前这股力量却被无形束缚。
         </p>
+        <!-- 薪资图 -->
         <b-container>
           <div
-            style="width: 100%"
-            class="flourish-embed flourish flourish-chart"
-            data-src="visualisation/10393031"
+            style="width: 100%; margin: 0 auto"
+            class="flourish-embed flourish"
+            data-src="visualisation/10530180"
           ></div>
         </b-container>
 
@@ -274,7 +324,6 @@
         <p>
           当然，进一步有进一步的欢喜。近年来，性别中立的营销方式越来越得到认可，从产品设计、开发、生产到推广，各个环节都更注重打破传统性别叙事，提倡给予女性更多自主选择权、倡导女性审美多元化。而2021年1月15日推出的《深圳市广告性别平等审视指南》也同样释放了关注两性定价平等的积极信号，成为制度探索路上踏出的勇敢一步。但破除“粉红税”的道路究竟有多漫长，只有当更多人亲身踏上征途方能体会。
         </p>
-        <tag-cloud></tag-cloud>
       </section>
     </div>
   </div>
@@ -291,7 +340,7 @@ import {
 } from "echarts/components";
 import VChart from "vue-echarts";
 import Jumbotron from "@/components/MyJumbotron.vue";
-import TimeLine from "@/components/icons/TimeLine";
+// import TimeLine from "@/components/icons/TimeLine";
 import LawTimeLine from "@/components/icons/LawTimeLine.vue";
 
 import * as echarts from "echarts";
@@ -300,6 +349,7 @@ echarts.registerTheme("vintage", themeVintage);
 
 // import * as floatingjs from "./floating.js";
 import TagCloud from "@/components/TagCloud.vue";
+import FemaleChanges from "@/assets/fm_change/FemaleChanges.vue";
 
 use([
   CanvasRenderer,
@@ -313,9 +363,10 @@ export default {
   components: {
     VChart,
     Jumbotron,
-    TimeLine,
+    // TimeLine,
     LawTimeLine,
     TagCloud,
+    FemaleChanges,
   },
   data() {
     return {
@@ -592,8 +643,11 @@ export default {
       },
       chartTheme: "vintage",
       title_pic_path: [
-        require("@/assets/rolling_bg_5.gif"),
-        require("@/assets/title_8.png"),
+        require("@/assets/rolling_bg_7.gif"),
+        require("@/assets/title_12.png"),
+        require("@/assets/title_10.png"),
+        require("@/assets/title_11.png"),
+        require("@/assets/title_7.png"),
       ],
       pinkTitle: `被<span style='color:pink'>粉</span>饰的迷局: `,
     };

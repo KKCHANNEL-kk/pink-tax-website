@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1397.54 786.12">
+    <defs>
+        <style>.a{fill:none;}.b{clip-path:url(#a);}.c{isolation:isolate;}.d{fill:#d05a6e;}</style>
+        <clipPath id="a" transform="translate(92.44 50.95)">
+            <rect class="a" width="1229.4" height="581.58" rx="21.84"/>
+        </clipPath>
+    </defs>
+    <g class="b">
+        <image class="c" width="1920" height="1080" transform="scale(0.73)" xlink:href="axis1.png"/>
+    </g>
+    <circle class="d" cx="395.24" cy="340.37" r="196.53"/>
+    <image class="c" width="106" height="49" transform="translate(1228.67 652.91) scale(0.73)" xlink:href="axis2.png"/>
+    <image class="c" width="106" height="49" transform="translate(104.82 656.55) scale(0.73)" xlink:href="axis3.png"/>
+    <image class="c" width="228" height="77" transform="translate(206.72 644.91) scale(0.73)" xlink:href="axis4.png"/>
+    <image class="c" width="229" height="77" transform="translate(372.68 644.91) scale(0.73)" xlink:href="axis5.png"/>
+    <image class="c" width="228" height="77" transform="translate(539.36 644.91) scale(0.73)" xlink:href="axis6.png"/>
+    <image class="c" width="228" height="77" transform="translate(705.32 644.91) scale(0.73)" xlink:href="axis7.png"/>
+    <image class="c" width="229" height="77" transform="translate(871.28 644.91) scale(0.73)" xlink:href="axis8.png"/>
+    <image class="c" width="228" height="77" transform="translate(1037.97 644.91) scale(0.73)" xlink:href="axis9.png"/>
+</svg>F

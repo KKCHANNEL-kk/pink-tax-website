@@ -5,16 +5,20 @@
   >
     <p
       class="text-center display-1 font-weight-bold"
-      style="top: 20%; font-weight: 500; text-shadow: black 0.1em 0.1em 0.2em"
+      style="
+        top: 20%;
+        font-weight: 500;
+        /* text-shadow: black 0.1em 0.1em 0.2em */
+      "
     >
       {{ title }}
     </p>
     <p
-      class="text-center display-1 font-weight-bold"
+      class="text-center display-3 font-weight-bold"
       style="
         bottom: 25%;
         font-weight: 500;
-        text-shadow: black 0.1em 0.1em 0.2em;
+        /* text-shadow: black 0.1em 0.1em 0.2em; */
       "
     >
       {{ subtitle }}
