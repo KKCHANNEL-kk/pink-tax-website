@@ -2,6 +2,7 @@
   <div>
     <svg
       class="tagcloud-all"
+      id="tagcloud"
       style="width: 100%; height: 420px"
       @mousemove="listener($event)"
     >
@@ -35,6 +36,7 @@
   position: relative;
   height: 100%;
   min-height: 400px;
+  min-width: 400px;
 }
 .tagcloud-all a {
   position: absolute;
@@ -178,6 +180,8 @@ export default {
   },
   created() {
     //初始化标签位置
+    this.width = window.screen.availWidth - 200;
+    console.log(this.width);
     const tagsNum = this.tags_info.length;
     console.log(tagsNum);
     this.tags_info.forEach((t, i) => {
@@ -190,10 +194,10 @@ export default {
       let a = Math.acos(k);
       let b = a * Math.sqrt(tagsNum * Math.PI);
       tag.x = this.CX + this.RADIUS * Math.sin(a) * Math.cos(b);
-      tag.y = this.CY + this.RADIUS * Math.sin(a) * Math.sin(b) - 10;
+      tag.y = this.CY + this.RADIUS * Math.sin(a) * Math.sin(b);
       tag.z = this.RADIUS * Math.cos(a);
-      console.log(tag);
       this.tags.push(tag);
+      console.log(this.CX, this.CY);
     });
     this.refreshBoard(this.tags[0]);
   },

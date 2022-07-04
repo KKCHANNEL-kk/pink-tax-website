@@ -815,4 +815,8 @@ span {
   color: rgb(246, 203, 203);
   font-weight: bolder;
 }
+#axis {
+  width: 70%;
+  margin: 0 auto;
+}
 </style>

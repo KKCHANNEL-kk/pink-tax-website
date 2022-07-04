@@ -3,12 +3,21 @@
     <!-- 封面GIF -->
     <Jumbotron
       :img="title_pic_path[0]"
-      :title="this.pinkTitle"
-      subtitle="货架上的“粉红税”陷阱"
+      title="被粉饰的迷局:"
+      subtitle="1        货架上的粉红税陷阱"
     >
     </Jumbotron>
     <!-- 布洛芬互动 -->
-    <div class="content container" style="height: 100%; min-height: 95vh">
+    <div
+      class="content container"
+      style="
+        height: 100%;
+        min-height: 95vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      "
+    >
       <transition
         name="fade"
         class="animate__animated animate__bounceIn"
@@ -16,7 +25,7 @@
       >
         <div v-if="selected_status == 0" key="q1_before">
           <p class="text-center display-6">
-            布洛芬是一款可用于减轻疼痛的药品。<br />当你需要购买一盒布洛芬止痛片时<br />有以下两种选择（二者功效相当）<br />你的选择是？
+            布洛芬是一款可用于减轻疼痛的药品<br />当你需要购买一盒布洛芬止痛片时<br />有以下两种选择（二者功效相当）<br />你的选择是？
           </p>
           <div class="ux_container container" id="question1">
             <div class="selected_card">
@@ -65,11 +74,11 @@
         >
           <b-row>
             <b-col>
-              <h3 class="text-center display-3">
-                有<span
+              <p class="text-center display-6">
+                有<span style="font-size: 2em"
                   >{{ ((this.same_a1 / this.sum_a1) * 100).toFixed(2) }}%</span
                 >的人和你做出一样的选择
-              </h3>
+              </p>
             </b-col>
           </b-row>
           <b-row style="width=100%" fluid>
@@ -127,22 +136,37 @@
     </div> -->
     <Jumbotron
       :img="title_pic_path[2]"
-      title='01. "听不见"的粉红税'
-      subtitle=" "
+      title="01. “听不见”的粉红税"
+      subtitle="“一种后知后觉的被欺骗感”"
     ></Jumbotron>
     <div class="content container">
-      <section id="hear">
+      <section id="hear1">
         <p>
           5月26日，一条关于“粉红税”的科普视频在抖音上收获了24万点赞，ID名为“淦诗琪”的博主在其中提到，“女性一生可能要比男性多花68w元”，在评论区引发争议，这也让一些网友第一次认识到这一现象。
+        </p>
+        <p>”当下觉得很震惊！因为我之前从来没有意识到这个问题。“</p>
+        <p>
+          楚怡正是通过这则视频第一次认识到”粉红税“。看完视频并愤然转发给好友后，还没来得及缓和心情，她旋即发现自己也深受其害——当她在购物平台上查询自己近期的消费记录，发现自己在过去一年内陆陆续续踩雷了视频里提到的商品：化妆镜、洗发水，甚至连自己购买的笔筒，搜索同款产品时都能发现更大众的款式，价格更为低廉。而当楚怡在宿舍群与舍友们讨论起此事，她们先是统一了口径，对此深感气愤。”我们各自去搜索了视频里提到的一些商品，有些商品的男女款价格差真的离谱到令人发指。“更大的问题也随之而来，一番讨论之下，楚怡在群里留下一串疑问：”为什么在此之前，我们都意识不到这件事情。“这个问题引起了女孩们的思考，也折射出这个议题长期以来的国内受众群体中的认知处境。群聊界面静置良久，楚怡意识到问题所在。她认为，”这种后知后觉的被欺骗感“或许来自相关议题的缺失。
+        </p>
+        <p>
+          但议题真的缺失了吗？在微博检索“粉红税"相关的议题，我们可以看到相应的词条讨论。
+        </p>
+      </section>
+    </div>
+    <!-- 词条滚动 -->
+    <tag-cloud></tag-cloud>
+    <div class="content container">
+      <section id="hear2">
+        <p>
+          但问题在于，绝大多数的相关微博话题词条中，讨论数量不超过5000，最高的一条#女款总是比男款贵是粉红税吗#讨论量仅达到1w+，与动辄上百万讨论量的社会议题相比，这或许并不在”广泛讨论“的范畴。某种程度上，议题并没有完全缺失，但讨论议题的声音过于微小，以至于大众听不见。
         </p>
         <p>
           事实上，“粉红税”并非新兴概念，目前国外已有相关研究与行业法规。纽约消费者事务部2015年发布的一项报告指出，针对女性的同类产品比男性同类产品贵7%，其中女性个护产品比男性贵13%；而早在1996年，美国加利福尼亚州威尔逊州长便出台了《废除性别税法》，目的为了抑制商家在销售核心功能相同，提供时间成本相同的服务时，针对男女性消费者制定不同定价的行为。
         </p>
-        <!-- 纽约调查可视化 -->
+        <!-- 纽约粉红税调查 -->
         <b-container>
           <div
-            style="width: 85%; margin: 0 auto"
-            class="flourish-embed flourish-hierarchy"
+            class="flourish-embed flourish-hierarchy flourish"
             data-src="visualisation/10412134"
           ></div>
         </b-container>
@@ -152,15 +176,13 @@
         <!-- 豆瓣讨论区提及商品 -->
         <b-container>
           <div
-            style="width: 85%; margin: 0 auto"
-            class="flourish-embed flourish-hierarchy"
+            class="flourish-embed flourish-hierarchy flourish"
             data-src="visualisation/10522352"
           ></div>
         </b-container>
-        <p>(待补充文本)</p>
-        <tag-cloud></tag-cloud>
       </section>
     </div>
+
     <Jumbotron
       :img="title_pic_path[3]"
       title='02. "看不见"的粉红税'
@@ -169,18 +191,21 @@
     <div class="content container">
       <section id="lifejourney1">
         <p>
+          “粉红税”并非一项显见的税目，如果不曾在庞大的商品基数中搜寻规律，绝大多数人只会对孤立的现象习焉不察，或将其归纳为一种偶然与巧合。但即便如此，在这些巧合交汇之间，一些人也留下了属于她们的声音。
+        </p>
+        <p>
           2021年年末，大二学生雨婷在某品牌电商旗舰店内下单了一条心仪已久的女款长裤。不久后，她却发现了令人瞠目的事实：该店同时还出售男子尺码的同款长裤，在外观设计与详情描述均相同的情况下，售价却比女款便宜100元。
         </p>
-
+        <p>
+          去年冬季，初入职场的映雪走进服装店准备购置保暖衣物，却便被摆放在正门的两个模特身着着的羽绒服价格“劝退”：女款羽绒服329元，男款200元。“成分含量没去看，外观上是一样的。”最后她选择与“粉红税”作无声的斗争，结果是：“冻着吧，多穿几件长袖。”
+        </p>
         <p>
           同样的，ID为「注销已」的豆瓣用户在社交媒体上分享个人购物经历，得知安踏旗舰店上某款的运动鞋，女性尺码也要比男性尺码贵20元，随后向客服询问价格差异的缘由，然而只得到“优惠力度不同”的答复。
         </p>
         <p>
           诸如“颜色不同”、“不同商品的优惠套餐不同”，是电商平台客服们的常见话术。面对此类现象，当下女性消费者的维权似乎止步于社交媒体上的控诉，或是选择“绕道而行”。
         </p>
-        <p>
-          去年冬季，初入职场的映雪走进服装店准备购置保暖衣物，却便被摆放在正门的两个模特身着着的羽绒服价格“劝退”：女款羽绒服329元，男款200元。“成分含量没去看，外观上是一样的。”最后她选择与“粉红税”作无声的斗争，结果是：“冻着吧，多穿几件长袖。”
-        </p>
+
         <p>
           诚然，供需关系或消费弹性会对男性和女性产品价格造成影响，进而产生差距；但“粉红定价”表象背后指向一种基于性别的定价歧视问题。
         </p>
@@ -188,6 +213,7 @@
           再者，由于大多数消费者对“粉红税”的认知有限，甚至有人认为部分商品的溢价是合理存在的，所以尽管女性在经济上要比男性付出更大代价，多数情况下不会采取进一步的维权行为，愤怒的情绪终究会被平息。作为曾经的“受害者”雨婷表示，将来如果在该店遇到了喜欢的商品，<b>“我还是会买的”</b>。
         </p>
       </section>
+      <!-- 女性一生换装 -->
       <div class="container"><FemaleChanges></FemaleChanges></div>
       <section id="lifejourney2">
         <p>
@@ -228,7 +254,7 @@
         <p>
           在佛山市某药店店主梁先生看来，新老两款布洛芬咀嚼片在成分、功效上无异，二者的重要成分布洛芬含量均为0.2克/粒。然而，在同一容量前提下，各大电商平台上标示的价格却相距甚远——新款价格却在老款基础上翻了一倍。
         </p>
-        <div class="container">【可视化】药代流程</div>
+        <!-- <div class="container">【可视化】药代流程</div> -->
         <p>
           通过追溯药品从出厂到流入市面的流通过程，不难发现，溢价问题出现在从药品代理商到零售上这一环节上。药房订货购药一般需要通过药品代理商，同为一盒十片的芬必得布洛芬，新旧两款药均在13～16元这一区间内浮动，差别不大。至于最终面向消费者的具体售价，梁先生透露，“不同药房有着不同的定价机制”。
         </p>
@@ -273,18 +299,19 @@
         <P>
           这并非是平地一声雷，美国在消除粉红税的道路上已探索已久。早在20世纪30年代，美国在起草消费税体系时就已提出了粉红税的概念；而于1995年，加利福尼亚州通过了《性别税废除法案》，在全国有关禁止性别歧视性定价的法案探索中迈出里程碑式的第一步。
         </P>
-        <div class="container" style="width: 80%">
-          <law-time-line></law-time-line>
+        <!-- 法律时间线 没过立法年份 -->
+        <div class="container" style="width: 100%">
+          <b-img :src="title_pic_path[5]" style="width: 100%"></b-img>
         </div>
-
-        <div class="addition">数据来源：网络搜索，westlaw</div>
+        <div class="addition">
+          来源：Westlaw法律数据库、美国国会官网、网络搜索
+        </div>
         <p>
           现如今，少数州和地方立法机构已经采取相关措施，禁止了基于性别的服务定价，但美国依然在禁止粉红税在司法和立法过程中面临诸多挑战。一方面，尽管存在上述出台法律的支持，但因同类商品存在价格差异而与商家对簿公堂的消费者依然少之又少。从法律全文数据库Westlaw检索结果来看，有关性别歧视性定价的案件仅有6例，而除去上诉案件的审理，只有3位消费者就该问题向法院提出诉讼，并皆以败诉告终。
         </p>
         <b-container>
           <div
-            style="width: 85%; margin: 0 auto"
-            class="flourish-embed flourish-map"
+            class="flourish-embed flourish-map flourish"
             data-src="visualisation/10525586"
           ></div>
         </b-container>
@@ -294,7 +321,6 @@
         <p>
           另一方面，既有法律所涉及的范围具有极大的局限性。在废除粉红税的法律体系中，商家依然被允许通过延长服务时间、提高服务成本和难度来设计更高的标价，而有关产品的价格歧视并不在法律的约束范围内。同时，国会两院拟议的《粉红税废除法案》几经波折，除了部分成员的阻挠，诸如“辨别何为‘类似产品’”等细节定义也成为阻碍推进立法的绊脚石。直到报道的今天，该法案始终停留在“提出草案”的第一步，在它之后，还有“众议院通过-参议院通过-总统批准-颁布法律”的漫漫长路。
         </p>
-        <LawTimeLine></LawTimeLine>
       </section>
     </div>
     <Jumbotron
@@ -312,8 +338,7 @@
         <!-- 薪资图 -->
         <b-container>
           <div
-            style="width: 100%; margin: 0 auto"
-            class="flourish-embed flourish"
+            class="flourish-embed flourish flourish"
             data-src="visualisation/10530180"
           ></div>
         </b-container>
@@ -341,7 +366,7 @@ import {
 import VChart from "vue-echarts";
 import Jumbotron from "@/components/MyJumbotron.vue";
 // import TimeLine from "@/components/icons/TimeLine";
-import LawTimeLine from "@/components/icons/LawTimeLine.vue";
+// import LawTimeLine from "@/components/icons/LawTimeLine.vue";
 
 import * as echarts from "echarts";
 import themeVintage from "@/assets/js/echartsTheme/vintage.json";
@@ -364,7 +389,7 @@ export default {
     VChart,
     Jumbotron,
     // TimeLine,
-    LawTimeLine,
+    // LawTimeLine,
     TagCloud,
     FemaleChanges,
   },
@@ -648,8 +673,9 @@ export default {
         require("@/assets/title_10.png"),
         require("@/assets/title_11.png"),
         require("@/assets/title_7.png"),
+        require("@/assets/law_timeline.png"),
       ],
-      pinkTitle: `被<span style='color:pink'>粉</span>饰的迷局: `,
+      pinkTitle: `被粉饰的迷局：货架上的“粉红税”陷阱`,
     };
   },
   created() {
@@ -715,6 +741,7 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 1rem;
 }
 section {
   text-align: center;
@@ -729,8 +756,8 @@ p {
   min-width: 100%;
   text-align: justify;
   max-width: 900px;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   line-height: 1.7rem;
   /* color: whitesmoke; */
 }
@@ -762,7 +789,7 @@ p {
 }
 .addition {
   min-width: 0;
-  font-size: 14px;
+  font-size: 1em;
   margin-top: 1rem;
   text-align: left;
   color: rgb(173, 173, 173);
@@ -800,7 +827,10 @@ h2 {
   width: 20rem;
   height: 20rem;
   background-color: white;
-  margin: 30px;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  margin-right: 30px;
   border-radius: 10px;
   /* 阴影 */
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
@@ -850,6 +880,7 @@ h2 {
   // width: 70%;
   // border-radius: 10px;
   // background-color: white;
+  width: 70%;
   margin: 0 auto;
 }
 </style>
