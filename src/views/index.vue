@@ -432,6 +432,9 @@ export default {
         ],
       },
       sankey_options: {
+        grid: {
+          right: "0",
+        },
         tooltip: {
           trigger: "item",
           formatter: "{b} : {c}",
@@ -443,6 +446,8 @@ export default {
             "从回收的407份问卷发现，在得知原先选择的商品款式比同类商品其他颜色（如黑色、灰色等）价格更高后，消费者的选择变化",
         },
         series: {
+          layoutIterations: 0,
+
           type: "sankey",
           layout: "none",
           right: "15%",
@@ -533,6 +538,18 @@ export default {
               name: "经典黑--299元",
               itemStyle: {
                 color: "rgba(35, 35, 35,0.7)",
+              },
+            },
+            {
+              name: "（得知高价）选择不变",
+              itemStyle: {
+                color: "rgba(237, 37, 109,0.7)",
+              },
+            },
+            {
+              name: "（得知高价）改变选择",
+              itemStyle: {
+                color: "rgba(183, 195, 229,0.7)",
               },
             },
           ],
@@ -657,6 +674,141 @@ export default {
             {
               source: "行李箱--少女粉",
               target: "经典黑--299元",
+              value: 19,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
+            },
+            {
+              source: "粉色--75元",
+              target: "（得知高价）选择不变",
+              value: 18,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
+            },
+            {
+              source: "粉色--79元",
+              target: "（得知高价）选择不变",
+              value: 14,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
+            },
+            {
+              source: "冰川蓝--399元",
+              target: "（得知高价）选择不变",
+              value: 61,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
+            },
+            {
+              source: "少女粉--399元",
+              target: "（得知高价）选择不变",
+              value: 28,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
+            },
+            {
+              source: "白色--60元",
+              target: "（得知高价）改变选择",
+              value: 10,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
+            },
+            {
+              source: "黑色--60元",
+              target: "（得知高价）改变选择",
+              value: 6,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
+            },
+            {
+              source: "灰色--65元",
+              target: "（得知高价）改变选择",
+              value: 8,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
+            },
+            {
+              source: "蓝色--65元",
+              target: "（得知高价）改变选择",
+              value: 18,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
+            },
+            {
+              source: "白色--60元",
+              target: "（得知高价）改变选择",
+              value: 10,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
+            },
+            {
+              source: "少女粉--399元",
+              target: "（得知高价）改变选择",
+              value: 2,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
+            },
+            {
+              source: "冰川蓝--399元",
+              target: "（得知高价）改变选择",
+              value: 2,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
+            },
+            {
+              source: "经典深蓝--299元",
+              target: "（得知高价）改变选择",
+              value: 30,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
+            },
+            {
+              source: "经典深蓝--299元",
+              target: "（得知高价）改变选择",
+              value: 8,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
+            },
+            {
+              source: "经典黑--299元",
+              target: "（得知高价）改变选择",
+              value: 33,
+              lineStyle: {
+                color: "gradient",
+                opacity: 0.5,
+              },
+            },
+            {
+              source: "经典黑--299元",
+              target: "（得知高价）改变选择",
               value: 19,
               lineStyle: {
                 color: "gradient",

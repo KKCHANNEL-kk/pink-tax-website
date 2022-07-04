@@ -664,6 +664,9 @@ export default {
       contents: {},
       p: 0,
       bar_options: {
+        grid: {
+          right: "10",
+        },
         title: {
           text: "Test",
         },
