@@ -3,26 +3,28 @@
     class="bg_container text-white shadow"
     :style="{ backgroundImage: 'url(' + backgroundImg + ')' }"
   >
-    <p
-      class="text-center display-1 font-weight-bold"
-      style="
-        top: 20%;
-        font-weight: 500;
-        /* text-shadow: black 0.1em 0.1em 0.2em */
-      "
-    >
-      {{ title }}
-    </p>
-    <p
-      class="text-center display-3 font-weight-bold"
-      style="
-        bottom: 25%;
-        font-weight: 500;
-        /* text-shadow: black 0.1em 0.1em 0.2em; */
-      "
-    >
-      {{ subtitle }}
-    </p>
+    <div class="bg_card">
+      <p
+        class="text-center display-1 font-weight-bold"
+        style="
+          font-weight: 500;
+          font-size: 5rem;
+          text-shadow: black 0.05em 0.05em 0.2em;
+        "
+      >
+        {{ title }}
+      </p>
+      <p
+        class="text-center display-3 font-weight-bold"
+        style="
+          font-weight: 500;
+          font-size: 3rem;
+          text-shadow: black 0.05em 0.05em 0.2em;
+        "
+      >
+        {{ subtitle }}
+      </p>
+    </div>
   </div>
 </template>
 
@@ -38,6 +40,16 @@ export default {
 </script>
 
 <style>
+.bg_card {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  width: 70%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
 .bg_container {
   width: 100vw;
   height: 125vh;
@@ -47,8 +59,11 @@ export default {
   /* min-width: 100%; */
   position: relative;
   min-height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .bg_container p {
-  position: absolute;
+  /* position: absolute; */
 }
 </style>

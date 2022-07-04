@@ -4,13 +4,13 @@
       class=""
       id="result2"
       key="q2_chart"
-      style="margin: 0 auto; width: 50%; height: 200px"
+      style="margin: 0 auto; width: 50%; height: 250px"
     >
       <v-chart
         class="chart"
         ref="bar"
         :option="bar_options"
-        style="height: 300px"
+        style="height: 250px"
       />
     </div>
     <transition
@@ -665,7 +665,7 @@ export default {
       p: 0,
       bar_options: {
         grid: {
-          right: "10",
+          left: "100",
         },
         title: {
           text: "Test",
@@ -727,7 +727,7 @@ export default {
       this.bar_options.series[0].data[0].value = info.price_m;
       this.bar_options.series[0].data[1].value = info.price_f;
       let name = info.name;
-      this.bar_options.title.text = `搜索"${name}"返回的商品均价`;
+      this.bar_options.title.text = `京东搜索"${name} 男/女"返回的商品均价`;
       this.bar_options.yAxis.data = [`"${name} 男"`, `"${name} 女"`];
     },
     getContent: function (name, price_m, price_f) {
