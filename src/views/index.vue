@@ -406,8 +406,9 @@
         美国国会官网：https://www.congress.gov<br />
         豆瓣“粉红税抵制者联盟”小组讨论帖：https://www.douban.com/group/711982/<br />
         《Boss直聘研究院2016年至2021年性别薪资差异报告》<br />京东商城商品检索数据<br />
-        纽约消费者事务部：From Cradle to Cane: The Cost of Being a Female<br />
-        Consumer（2015）<br />《深圳市广告性别平等审视指南（2021年）》
+        纽约消费者事务部：From Cradle to Cane: The Cost of Being a Female
+        Consumer（2015）<br />《深圳市广告性别平等审视指南（2021年）》<br />
+        “粉红税”新浪微博话题
       </div>
     </div>
   </div>

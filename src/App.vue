@@ -24,7 +24,7 @@
       <b-card-footer
         style="background-color: rgb(220, 110, 120); color: whitesmoke"
         >
-        “粉红税”新浪微博话题 2022 © 深圳大学传播学院
+        2022 © 深圳大学传播学院
       </b-card-footer>
     </b-card>
   </div>
