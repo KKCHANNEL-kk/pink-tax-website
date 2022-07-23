@@ -31,7 +31,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .tagcloud-all {
   position: relative;
   height: 100%;
@@ -48,16 +48,16 @@
   padding: 3px 6px;
 }
 .tagcloud-all a text {
-  color: aqua;
+  fill: rgba(237, 37, 109, 0.7);
 }
 
-.tagcloud-all a text :hover {
-  color: #ff0000;
-  /* letter-spacing: 2px; */
+.tagcloud-all a text:hover {
+  fill: rgba(237, 37, 109, 1);
 }
 #board {
   height: 200px;
-  width: 50%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;

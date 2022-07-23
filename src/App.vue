@@ -21,11 +21,11 @@
         <router-view></router-view>
         <!-- <nuxt-child></nuxt-child> -->
       </b-card-body>
-      <b-card-footer
+      <!-- <b-card-footer
         style="background-color: rgb(220, 110, 120); color: whitesmoke"
-        >
+      >
         2022 © 深圳大学传播学院
-      </b-card-footer>
+      </b-card-footer> -->
     </b-card>
   </div>
 </template>
