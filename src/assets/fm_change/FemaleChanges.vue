@@ -42,7 +42,7 @@
             </g>
           </g> -->
             <g id="椭圆_1" data-name="椭圆 1">
-              <circle class="cls-4" cx="543" cy="467.62" r="270" />
+              <circle class="cls-4 d" cx="543" cy="467.62" r="270" />
             </g>
           </g>
           <g id="色块">
@@ -734,7 +734,7 @@ export default {
       // this.bar_options.series[0].data[0].value = price_m;
       // this.bar_options.series[0].data[1].value = price_f;
       // console.log(this.bar_options);
-      const content = `<div class="tips" style="width:250px">
+      const content = `<div class="tips" style="width:200px">
       <p>商品名称：${name}<br/>
       搜索词返回的商品均价:<br/>
         "${name} 男": <span>${price_m}</span>

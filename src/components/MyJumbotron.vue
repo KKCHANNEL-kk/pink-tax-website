@@ -8,7 +8,7 @@
         class="text-center display-1 font-weight-bold"
         style="
           font-weight: 500;
-          font-size: 7rem;
+          font-size: 6rem;
           text-shadow: black 0.05em 0.05em 0.2em;
         "
       >

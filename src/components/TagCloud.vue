@@ -181,9 +181,9 @@ export default {
   created() {
     //初始化标签位置
     this.width = window.screen.availWidth - 200;
-    console.log(this.width);
+    // console.log(this.width);
     const tagsNum = this.tags_info.length;
-    console.log(tagsNum);
+    // console.log(tagsNum);
     this.tags_info.forEach((t, i) => {
       let tag = {};
       tag.text = t.text;
@@ -197,7 +197,7 @@ export default {
       tag.y = this.CY + this.RADIUS * Math.sin(a) * Math.sin(b);
       tag.z = this.RADIUS * Math.cos(a);
       this.tags.push(tag);
-      console.log(this.CX, this.CY);
+      // console.log(this.CX, this.CY);
     });
     this.refreshBoard(this.tags[0]);
   },
