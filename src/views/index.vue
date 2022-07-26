@@ -602,18 +602,21 @@
         <p>在媒体领域，有关“粉红税”的文章数量也正在不断攀升。</p>
 
         <!-- 媒体报道图 -->
-        <b-container>
-          <div>
-            <iframe
-              src="https://hanabi.data-viz.cn/chart.html?id=mul_9328f7879bb64d548ec7384e8b2da2cb&isIframe=1"
-              frameborder="0"
-              width="100%"
-              height="720px"
-            ></iframe>
-          </div>
-        </b-container>
+        <b-container> </b-container>
+        <div style="display: flex; flex-direction: column; align-items: center">
+          <iframe
+            src="https://hanabi.data-viz.cn/chart.html?id=mul_9328f7879bb64d548ec7384e8b2da2cb&isIframe=1"
+            frameborder="0"
+            style="
+              width: 1280px;
+              height: 960px;
+              transform-origin: left top;
+              transform: scale(0.8, 0.8) translate(calc(100% * 0.125));
+            "
+          ></iframe>
+        </div>
 
-        <p>
+        <p style="margin-top: 0">
           2022年02月16日，“粉红税”正式“亮相”于《今晚报》的版面，是近年来首次以“网络新词语”的概念刊登在纸质报刊上。从数据上对比，尽管网站与报刊的报道量差异悬殊，但在消费主义席卷下的互联网，受众仍能直接便捷地捕捉到相关议题的讨论。
         </p>
         <p>
@@ -1126,6 +1129,7 @@ export default {
         require("@/assets/title_9.png"),
         require("@/assets/title_7.png"),
         require("@/assets/law_timeline.png"),
+        require("@/assets/media.gif"),
       ],
       pinkTitle: `被粉饰的迷局：货架上的“粉红税”陷阱`,
     };
