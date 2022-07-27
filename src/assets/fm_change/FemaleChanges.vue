@@ -668,7 +668,9 @@ export default {
           left: "100",
         },
         title: {
+          show: true,
           text: "Test",
+          subtext: "鼠标点击商品图案，可查看价格对比",
         },
         tooltip: {
           trigger: "axis",

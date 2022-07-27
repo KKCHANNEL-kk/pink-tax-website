@@ -1,12 +1,14 @@
 <template>
   <div>
     <!-- 封面GIF -->
-    <Jumbotron
+    <!-- <Jumbotron
       :img="title_pic_path[0]"
       title="被粉饰的迷局:"
       subtitle="货架上的“粉红税”陷阱"
     >
-    </Jumbotron>
+    </Jumbotron> -->
+    <div class="bg_container text-white shadow"
+    :style="{ backgroundImage: 'url(' + title_pic_path[0] + ')' }"></div>
     <!-- 布洛芬互动 -->
     <div
       class="content container"
@@ -278,7 +280,6 @@
         <FemaleChanges></FemaleChanges>
         <section style="padding: 0">
           <div class="addition">
-            鼠标点击商品图案，可查看价格对比<br />
             来源：京东商城使用指定检索词组合得到的检索结果
           </div>
         </section>
@@ -1122,12 +1123,12 @@ export default {
       },
       chartTheme: "vintage",
       title_pic_path: [
-        require("@/assets/rolling_bg_7.gif"),
-        require("@/assets/title_12.png"),
-        require("@/assets/title_10.png"),
-        require("@/assets/title_11.png"),
+        require("@/assets/静抬头.png"),
+        require("@/assets/过渡页3.jpg"),
+        require("@/assets/过渡页1.jpg"),
+        require("@/assets/过渡页2.png"),
         require("@/assets/title_9.png"),
-        require("@/assets/title_7.png"),
+        require("@/assets/过渡页4.jpg"),
         require("@/assets/law_timeline.png"),
         require("@/assets/media.gif"),
       ],
