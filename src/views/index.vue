@@ -7,8 +7,10 @@
       subtitle="货架上的“粉红税”陷阱"
     >
     </Jumbotron> -->
-    <div class="bg_container text-white shadow"
-    :style="{ backgroundImage: 'url(' + title_pic_path[0] + ')' }"></div>
+    <div
+      class="bg_container text-white shadow"
+      :style="{ backgroundImage: 'url(' + title_pic_path[0] + ')' }"
+    ></div>
     <!-- 布洛芬互动 -->
     <div
       class="content container"
@@ -233,8 +235,8 @@
 
     <Jumbotron
       :img="title_pic_path[3]"
-      title='02. “看不见"的粉红税'
-      subtitle="从「童装」到「老年奶粉」，置身“粉红税”陷阱中的“她”们"
+      title="02.“看不见”的粉红税"
+      subtitle="从「童装」到「老年奶粉」\n置身“粉红税”陷阱中的“她”们"
     ></Jumbotron>
     <div class="content container">
       <section id="lifejourney1">
@@ -320,7 +322,7 @@
     </div>
     <Jumbotron
       :img="title_pic_path[1]"
-      title="03. “粉红”法则，谁在幕后操盘？"
+      title="03. “粉红”法则\n谁在幕后操盘？"
       subtitle="市场、文化、制度，孰是孰非"
     >
     </Jumbotron>
@@ -440,9 +442,9 @@
         <p>
           而法国社会学家布尔迪厄同样认为，文化悄然嵌入在社会评价标准中，以隐秘的方式影响社会行动者，在这一过程中让他们潜移默化地接受一套社会惯例。“粉红税”正是这样一种商品市场与社会文化共谋的结果。
         </p>
-        <p>
+        <!-- <p>
           营销口号打造精致的女生色系，附着符合社会文化定义的性别符号，女性一旦对这类符号化的商品起心动念，就等于接受了社会设置的规则，甘心为所谓的“女性专属”商品买单。
-        </p>
+        </p> -->
         <p>
           这也证明，“粉红税”所扎根的文化土壤正是基于性别的刻板印象。
           <b style="color: #ed256d"

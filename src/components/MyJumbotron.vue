@@ -4,25 +4,11 @@
     :style="{ backgroundImage: 'url(' + backgroundImg + ')' }"
   >
     <div class="bg_card">
-      <p
-        class="text-center display-1 font-weight-bold"
-        style="
-          font-weight: 500;
-          font-size: 6rem;
-          text-shadow: black 0.05em 0.05em 0.2em;
-        "
-      >
-        {{ title }}
+      <p class="text-center" style="line-height: 5rem" v-html="t">
+        <!-- {{ title }} -->
       </p>
-      <p
-        class="text-center display-3 font-weight-bold"
-        style="
-          font-weight: 500;
-          font-size: 4rem;
-          text-shadow: black 0.05em 0.05em 0.2em;
-        "
-      >
-        {{ subtitle }}
+      <p class="text-center" style="line-height: 4rem" v-html="st">
+        <!-- {{ subtitle }} -->
       </p>
     </div>
   </div>
@@ -34,7 +20,18 @@ export default {
   data() {
     return {
       backgroundImg: this.img,
+      t:
+        "<span class='title'>" +
+        this.title.replace(/\\n/g, "<br/>") +
+        "</span>",
+      st:
+        "<span class='subtitle'>" +
+        this.subtitle.replace(/\\n/g, "<br/>") +
+        "</span>",
     };
+  },
+  created() {
+    console.log(this.subtitle.replace(/\\n/g, "<br>"));
   },
 };
 </script>
@@ -44,11 +41,14 @@ export default {
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
   width: 70%;
-  height: 50%;
+  height: 60%;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   align-content: space-around;
+  justify-content: center;
+  align-items: center;
+  white-space: pre-wrap;
 }
 .bg_container {
   width: 100vw;
@@ -65,5 +65,26 @@ export default {
 }
 .bg_container p {
   /* position: absolute; */
+}
+.bg_card p {
+  /* padding: 5%; */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.bg_card p span {
+  color: white;
+  font-weight: 400;
+
+  text-shadow: black 0.05em 0.05em 0.2em;
+
+  white-space: pre-wrap;
+}
+.title {
+  font-size: 4rem;
+  /* padding-bottom: 20%; */
+}
+.subtitle {
+  font-size: 3rem;
+  /* padding-top: 20%; */
 }
 </style>
