@@ -1142,7 +1142,7 @@ export default {
       },
       chartTheme: "vintage",
       title_pic_path: [
-        require("@/assets/静抬头.png"),
+        require("@/assets/静抬头.jpg"),
         require("@/assets/过渡页3.jpg"),
         require("@/assets/过渡页1.jpg"),
         require("@/assets/过渡页2.png"),
